@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "main": "library.js",
+  "main": "lib/index.js",
   "scripts": {
     "build": "rsbuild build",
     "dev": "rsbuild dev --open",
