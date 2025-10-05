@@ -1,35 +1,71 @@
+import React from 'react';
 import { TextInput } from './textinput';
 
-const meta = {
-  component: TextInput,
+export default {
   title: 'Components/TextInput',
+  component: TextInput,
+  parameters: {
+    layout: 'centered',
+  },
+  tags: ['autodocs'],
   argTypes: {
-    label: {
-      control: 'text',
-      description: 'Label for the input field',
-      defaultValue: 'Enter text here', // Default value for the story
-    },
-    placeholder: {
-      control: 'text',
-      description: 'Placeholder text for the input field',
-      defaultValue: 'Type something...', // Default placeholder
-    },
+    label: { control: 'text' },
+    placeholder: { control: 'text' },
     type: {
-      control: 'select',
-      options: ['text', 'email', 'password', 'number'],
-      description: 'Type of input field',
-      defaultValue: 'text', // Default type
+      control: { type: 'select' },
+      options: ['text', 'password', 'email', 'number'],
     },
-    disabled: {
-      control: 'boolean',
-      description: 'Whether the input is disabled or not',
-      defaultValue: false, // Default value for the story
-    },
+    value: { control: 'text' },
+    onChange: { action: 'changed' },
+    disabled: { control: 'boolean' },
+    readOnly: { control: 'boolean' },
   },
 };
 
-export default meta;
-
 export const Default = {
-  args: {},
+  args: {
+    label: 'Username',
+    placeholder: 'Enter your username',
+    type: 'text',
+  },
+};
+
+export const Password = {
+  args: {
+    label: 'Password',
+    placeholder: 'Enter your password',
+    type: 'password',
+  },
+};
+
+export const Email = {
+  args: {
+    label: 'Email',
+    placeholder: 'Enter your email',
+    type: 'email',
+  },
+};
+
+export const WithValue = {
+  args: {
+    label: 'Pre-filled Value',
+    value: 'example@email.com',
+    type: 'email',
+  },
+};
+
+export const Disabled = {
+  args: {
+    label: 'Disabled Input',
+    placeholder: 'This input is disabled',
+    disabled: true,
+  },
+};
+
+export const ReadOnly = {
+  args: {
+    label: 'Read-Only Input',
+    value: 'This value cannot be changed',
+    readOnly: true,
+  },
 };
