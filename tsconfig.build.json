@@ -1,0 +1,33 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./lib",
+    "rootDir": "./src",
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "jsx": "react-jsx"
+  },
+  "include": [
+    "src/components/**/*.ts",
+    "src/components/**/*.tsx",
+    "src/design-system/**/*.ts",
+    "src/design-system/**/*.tsx",
+    "src/layouts/**/*.ts",
+    "src/layouts/**/*.tsx",
+    "src/typography/**/*.ts",
+    "src/typography/**/*.tsx",
+    "src/widgets/**/*.ts",
+    "src/widgets/**/*.tsx",
+  ],
+  "exclude": [
+    "node_modules",
+    "lib",
+    "storybook-static",
+    "**/*.stories.tsx",
+    "**/*.stories.ts",
+    "src/App.tsx",
+    "src/index.tsx",
+    "src/App.css",
+    "src/theme.constants.ts"
+  ]
+}

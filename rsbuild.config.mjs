@@ -4,7 +4,7 @@ import { pluginReact } from '@rsbuild/plugin-react';
 const config = defineConfig(({ command, environment }) => {
   if (environment === 'storybook') {
     return {
-      entry: './src/index.jsx',
+      entry: './src/index.tsx',
       plugins: [pluginReact()],
       output: {
         distPath: {
@@ -16,7 +16,7 @@ const config = defineConfig(({ command, environment }) => {
 
   if (environment === 'library') {
     return {
-      entry: './library.js',
+      entry: './library.ts',
       plugins: [pluginReact()],
       output: {
         target: 'node',
@@ -29,7 +29,7 @@ const config = defineConfig(({ command, environment }) => {
 
   // Default configuration if no specific environment is matched
   return {
-    entry: './src/index.jsx', // Or a default entry point
+    entry: './src/index.tsx', // Or a default entry point
     plugins: [pluginReact()],
   };
 });
