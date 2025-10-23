@@ -18,6 +18,7 @@
     "src/typography/**/*.tsx",
     "src/widgets/**/*.ts",
     "src/widgets/**/*.tsx",
+    "src/index.ts"
   ],
   "exclude": [
     "node_modules",
