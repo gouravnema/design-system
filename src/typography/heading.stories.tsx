@@ -10,21 +10,21 @@ export default {
 };
 
 export const Heading1 = {
-  render: (args) => <H1 {...args} />,
+  render: (args: any) => <H1 {...args} />,
   args: {
     children: 'This is an H1 Heading',
   },
 };
 
 export const Heading4 = {
-  render: (args) => <H4 {...args} />,
+  render: (args: any) => <H4 {...args} />,
   args: {
     children: 'This is an H4 Heading',
   },
 };
 
 export const CustomText = {
-  render: (args) => (
+  render: (args: any) => (
     <>
       <H1>Custom H1: {args.h1Text}</H1>
       <H4>Custom H4: {args.h4Text}</H4>

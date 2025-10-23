@@ -10,7 +10,7 @@ interface ChartDataItem {
     [key: string]: any; // Add index signature
 }
 
-interface DoughnutChartProps {
+export interface DoughnutChartProps {
     chartName?: string;
     data: ChartDataItem[];
 }

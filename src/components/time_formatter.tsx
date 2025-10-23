@@ -1,6 +1,6 @@
 import React from 'react';
 import Humanize from 'humanize-duration';
-interface TimeFormatterProps {
+export interface TimeFormatterProps {
     timeInSeconds: number;
     color?: string;
     humanize?: boolean;

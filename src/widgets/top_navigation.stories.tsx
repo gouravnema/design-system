@@ -22,7 +22,7 @@ export default {
 };
 
 export const Default = {
-  render: (args) => (
+  render: (args:any) => (
     <StoryWrapper>
       <TopNavigation {...args} />
     </StoryWrapper>
@@ -33,7 +33,7 @@ export const Default = {
 };
 
 export const WithCustomBrand = {
-  render: (args) => (
+  render: (args:any) => (
     <StoryWrapper>
       <TopNavigation {...args} />
     </StoryWrapper>

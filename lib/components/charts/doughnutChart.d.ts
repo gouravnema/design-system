@@ -5,7 +5,7 @@ interface ChartDataItem {
     color?: string;
     [key: string]: any;
 }
-interface DoughnutChartProps {
+export interface DoughnutChartProps {
     chartName?: string;
     data: ChartDataItem[];
 }

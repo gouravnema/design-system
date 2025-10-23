@@ -32,7 +32,7 @@ export default {
   },
 };
 
-const Template = (args) => {
+const Template = (args:any) => {
   const [activeLink, setActiveLink] = useState(Object.values(args.links).find(link => link.active)?.value || 'home');
 
   const handleLinkClick = (linkValue) => {
@@ -47,7 +47,7 @@ const Template = (args) => {
       {
         ...link,
         active: link.value === activeLink,
-        onClick: (e) => {
+        onClick: (e:any) => {
           e.preventDefault();
           handleLinkClick(link.value);
         },

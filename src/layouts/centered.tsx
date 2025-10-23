@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-interface CenteredProps extends React.HTMLAttributes<HTMLDivElement> {}
+export interface CenteredProps extends React.HTMLAttributes<HTMLDivElement> {}
 
 export const Centered =  styled.div<CenteredProps>`
     display: flex;

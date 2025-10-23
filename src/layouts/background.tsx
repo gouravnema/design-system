@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import {COLORS, TYPOGRAPHGY} from "../theme.constants";
 
-interface BackgroundProps extends React.HTMLAttributes<HTMLDivElement> {}
+export interface BackgroundProps extends React.HTMLAttributes<HTMLDivElement> {}
 
 export const Background = styled.div<BackgroundProps>`
     background: ${COLORS.background};

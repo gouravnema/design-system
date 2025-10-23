@@ -24,7 +24,7 @@ const InputGroup = styled.div`
     }
 `
 
-interface TextInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+export interface TextInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
     label: string;
 }
 

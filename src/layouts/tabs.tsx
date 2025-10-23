@@ -33,7 +33,7 @@ interface TabItem {
     active: boolean;
 }
 
-interface TabsProps {
+export interface TabsProps {
     tabs: TabItem[];
     onTabChange: (value: string) => void;
     content: React.ReactNode;
