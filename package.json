@@ -12,7 +12,7 @@
   },
   "scripts": {
     "clean": "rm -rf lib",
-    "build": "npm run clean && rsbuild build --env library && npm run build:types",
+    "build": "npm run clean && rsbuild build --env-mode library && npm run build:types",
     "build:types": "tsc -p tsconfig.build.json",
     "dev": "rsbuild dev --open",
     "format": "prettier --write .",

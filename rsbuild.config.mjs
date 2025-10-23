@@ -1,8 +1,9 @@
 import { defineConfig } from '@rsbuild/core';
 import { pluginReact } from '@rsbuild/plugin-react';
 
-const config = defineConfig(({ command, environment }) => {
-  if (environment === 'storybook') {
+const config = defineConfig(({ command, envMode }) => {
+  if (envMode === 'storybook') {
+    console.log('Building for Storybook...');
     return {
       entry: './src/index.tsx',
       plugins: [pluginReact()],
@@ -14,9 +15,10 @@ const config = defineConfig(({ command, environment }) => {
     };
   }
 
-  if (environment === 'library') {
+  if (envMode === 'library') {
+    console.log('Building for Library...');
     return {
-      entry: './library.ts',
+      entry: './src/index.ts',
       plugins: [pluginReact()],
       output: {
         target: 'node',
