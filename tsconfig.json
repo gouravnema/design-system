@@ -21,7 +21,7 @@
     "outDir": "./lib",
     "declarationDir": "./lib"
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "library.ts"],
+  "include": ["src/**/*.ts", "src/**/*.tsx", "index.ts"],
   "exclude": [
     "node_modules",
     "lib",
