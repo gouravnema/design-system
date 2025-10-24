@@ -1,8 +1,8 @@
 import { defineConfig } from '@rslib/core';
 import { pluginReact } from '@rsbuild/plugin-react'; // Using rsbuild plugin as rslib plugin-react was not found
 
-const config = defineConfig(({ command, environment }) => {
-  if (environment === 'storybook') {
+const config = defineConfig(({ envMode }) => {
+  if (envMode === 'storybook') {
     console.log('Building for Storybook...');
     return {
       entry: './src/index.tsx',
@@ -15,7 +15,7 @@ const config = defineConfig(({ command, environment }) => {
     };
   }
 
-  if (command === 'build') {
+  if (envMode === 'library') {
     console.log('Building for Library...');
     return {
       lib: [
