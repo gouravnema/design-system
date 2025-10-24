@@ -32,14 +32,6 @@ const config = defineConfig(({ command, environment }) => {
           root: 'lib'
         },
       },
-      build: {
-        rollupOptions: {
-          external: [
-            'react',
-            'react-dom'
-          ]
-        }
-      }
     };
   }
 
