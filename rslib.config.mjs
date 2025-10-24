@@ -12,6 +12,7 @@ const config = defineConfig(({ envMode }) => {
           root: 'storybook-static'
         },
       },
+      externals: ['react', 'react-dom'], // Mark React as external
     };
   }
 
@@ -32,6 +33,7 @@ const config = defineConfig(({ envMode }) => {
           root: 'lib'
         },
       },
+      externals: ['react', 'react-dom'], // Mark React as external
     };
   }
 
@@ -39,6 +41,7 @@ const config = defineConfig(({ envMode }) => {
   return {
     entry: './src/index.tsx', // Or a default entry point
     plugins: [pluginReact()],
+    externals: ['react', 'react-dom'], // Mark React as external
   };
 });
 
