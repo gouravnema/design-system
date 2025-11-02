@@ -3,7 +3,7 @@ import { COLORS } from '../../theme.constants';
 
 type NavbarBrandProps = {
     logo: string;
-    title: string;
+    title?: string;
 }
 
 export const NavbarBrand = styled.div<NavbarBrandProps>`

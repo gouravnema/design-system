@@ -27,7 +27,7 @@ export const Silhouette = ({ code, rounded, size = 10 }: PeopleProps) => {
     <Sprite rounded={rounded}
             width={size}
             height={size}
-            maxHeight={'64px'}
+            maxSize={'64px'}
             positionX={coords.x * factor}
             positionY={coords.y * factor}
             src={headsSprite}
