@@ -10,7 +10,8 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = styled(Card)`
     width: calc(100% - 24px);
-    min-height: 6vw;
+    min-height: 60px;
+    max-height: 80px;
     padding: 0;
     margin: 5px;
     display: flex;

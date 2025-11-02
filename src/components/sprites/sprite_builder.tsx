@@ -24,6 +24,8 @@ const SpriteContainer = styled.div<SpriteProps>`
     &.rounded {
         border-radius: 50%;
     }
+    max-height: ${p=>p.maxHeight};
+    max-width: ${p=>p.maxHeight};
 `;
 
 
