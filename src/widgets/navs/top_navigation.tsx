@@ -8,9 +8,6 @@ import LogoImg from './logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
-interface NavbarProps extends React.HTMLAttributes<HTMLDivElement> {
-}
-
 const Navbar = styled(Card)`
     width: calc(100% - 24px);
     min-height: 6vw;
@@ -21,9 +18,6 @@ const Navbar = styled(Card)`
     font-size: 1rem;
 `;
 
-
-interface NavbarTogglerProps extends React.HTMLAttributes<HTMLDivElement> {
-}
 const ItemViewContainer = styled.div`
     padding: 5px 10px;
     min-width: 50px;
@@ -106,7 +100,7 @@ const ProfileContainer = styled.div`
     padding: 5px;
     flex-direction: row;
 
-    > .img-holder {
+    >.img-holder {
         width: 5vw;
         height: 5vw;
         display: flex;
