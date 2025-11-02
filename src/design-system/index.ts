@@ -17,4 +17,4 @@ export * from './tabs';
 export * from './textinput';
 export * from './theme.constants';
 export * from './time_formatter';
-export * from './top_navigation';
+export * from '../widgets/navs/top_navigation';
