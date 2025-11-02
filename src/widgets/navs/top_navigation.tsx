@@ -10,13 +10,14 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = styled(Card)`
     width: calc(100% - 24px);
-    min-height: 60px;
+    min-height: 40px;
     max-height: 80px;
     padding: 0;
     margin: 5px;
     display: flex;
     gap: 10px;
-    font-size: 1rem;
+    font-size: 1.25vw;
+    max-font-size: 1rem;
 `;
 
 const ItemViewContainer = styled.div`
