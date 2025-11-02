@@ -12,7 +12,7 @@ export interface PeopleProps {
 // generate a map of all heads with their coordinates
 const cordX = [9, 82, 155, 226];
 const cordY = [8, 79, 151, 223];
-const map = cordX.reduce((acc, x, i) => {
+const map = cordX.reduce((acc:Record<string, {x:number, y:number}>, x, i) => {
   cordY.forEach((y, j) => {
     acc[`head_${i + 1}_${j + 1}`] = { x, y };
   });

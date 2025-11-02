@@ -44,18 +44,16 @@ export type MenuCollection = {
 
 export type ItemType = Array<MenuItem | MenuCollection>;
 
-interface ProfileData extends React.HTMLAttributes<HTMLDivElement> {
-  data?: {
+interface ProfileData {
     name: string;
     avatarUrl?: string;
-  };
 }
 
 export interface TopNavigationProps {
   toggleShowSideNav: () => void;
   items?: ItemType;
   title?: string;
-  profileData?: ProfileData;
+  profileData: ProfileData;
 }
 
 const ItemView = ({ item }: { item: MenuItem }) => {
@@ -145,7 +143,7 @@ const Profile = ({ data }: { data?: { name: string; avatarUrl?: string } }) => {
   );
 };
 
-export const TopNavigation: React.FC<TopNavigationProps> = ({ title, toggleShowSideNav, profileData, items = [] }) => {
+export const TopNavigation: React.FC<TopNavigationProps> = ({ title, profileData, items = [] }) => {
   return (
     <Navbar>
       <NavbarBrand title={title} logo={LogoImg} />

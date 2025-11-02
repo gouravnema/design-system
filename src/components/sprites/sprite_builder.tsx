@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import React from 'react';
-import { SpriteProps } from './people';
 import ClassName from 'classnames';
 
 export interface SpriteProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -11,6 +10,7 @@ export interface SpriteProps extends React.HTMLAttributes<HTMLDivElement> {
   src: string; // source of the sprite sheet image
   rounded?: boolean; // whether the sprite should be rounded
   size?: number; // size of the sprite sheet image
+  maxSize?: string; // max height of the sprite
 }
 
 
@@ -24,8 +24,8 @@ const SpriteContainer = styled.div<SpriteProps>`
     &.rounded {
         border-radius: 50%;
     }
-    max-height: ${p=>p.maxHeight};
-    max-width: ${p=>p.maxHeight};
+    max-height: ${p=>p.maxSize};
+    max-width: ${p=>p.maxSize};
 `;
 
 
