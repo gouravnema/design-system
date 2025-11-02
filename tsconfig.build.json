@@ -18,7 +18,8 @@
     "src/typography/**/*.tsx",
     "src/widgets/**/*.ts",
     "src/widgets/**/*.tsx",
-    "src/index.ts"
+    "src/index.ts",
+    "src/declarations.d.ts"
   ],
   "exclude": [
     "node_modules",
