@@ -1,62 +1,37 @@
 import React, { SyntheticEvent } from 'react';
 import styled from 'styled-components';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
-import { Card } from '../../design-system/card';
-import { Head3 } from '../../components/sprites/people';
-
+import { Card } from '../../design-system';
+import { Silhouette } from '../../components/sprites/people/silhouette';
+import { NavbarBrand } from './navbar_brand';
+import LogoImg from './logo.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
 interface NavbarProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 const Navbar = styled(Card)`
     width: calc(100% - 24px);
+    min-height: 6vw;
     padding: 0;
-    margin: 10px;
+    margin: 5px;
     display: flex;
     gap: 10px;
     font-size: 1rem;
-    .title{
-        margin: 0 10px;
-        flex-grow: 1;
-        justify-content: center;
-        align-items: center;
-    }
-    .cta{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 200px;
-    }
-    .profile{
-        margin: 0 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
 `;
 
-interface NavbarBrandProps extends React.HTMLAttributes<HTMLDivElement> {
-}
-
-const NavbarBrand = styled.div<NavbarBrandProps>``;
 
 interface NavbarTogglerProps extends React.HTMLAttributes<HTMLDivElement> {
 }
-
-const NavbarToggler = styled.div<NavbarTogglerProps>``;
-
-
 const ItemViewContainer = styled.div`
-    //border: 1px solid blue;
     padding: 5px 10px;
     min-width: 50px;
-
     &:hover {
         cursor: pointer;
         text-decoration: underline;
     }
 `;
-const ItemCollectionViewContainer = styled.div``;
 
 export type MenuItem = {
   label: string;
@@ -71,7 +46,7 @@ export type MenuCollection = {
   label: string;
 };
 
-export type ItemType = Array<MenuItem|MenuCollection>;
+export type ItemType = Array<MenuItem | MenuCollection>;
 
 interface ProfileData extends React.HTMLAttributes<HTMLDivElement> {
   data?: {
@@ -118,26 +93,29 @@ const ItemsContainer = styled.div`
     display: flex;
     gap: 5px;
     font-weight: 500;
-    //border: 1px solid darkred;
     padding: 5px;
     flex-grow: 1;
-
+    align-items: center;
+    justify-content: flex-end;
 `;
 
 const ProfileContainer = styled.div`
     display: flex;
     gap: 5px;
     align-items: center;
-    //border: 1px solid green;
-    padding: 5px; 
-    >.img-holder{
-        width:30px;
-        height:30px;
-        border-radius: 50%;
+    padding: 5px;
+    flex-direction: row;
+
+    > .img-holder {
+        width: 5vw;
+        height: 5vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 `;
 
-const Items = ({items}:{items:ItemType})=>{
+const Items = ({ items }: { items: ItemType }) => {
   return <ItemsContainer>
     {items.map((item) => {
       if ('items' in item) {
@@ -153,32 +131,30 @@ const Items = ({items}:{items:ItemType})=>{
       }
     })}
   </ItemsContainer>;
-}
+};
 
 
 const Profile = ({ data }: { data?: { name: string; avatarUrl?: string } }) => {
   return (
     <ProfileContainer>
       <div className={'img-holder'}>
-      {data?.avatarUrl && <img src={data.avatarUrl} alt={data.name} /> || <Head3/>}
+        {data?.avatarUrl && <img src={data.avatarUrl} alt={data.name} /> ||
+          <Silhouette code={'head_1_2'} rounded size={4} />}
       </div>
-      <span>{data?.name}</span>
+      <div>
+        {data?.name}
+        <FontAwesomeIcon icon={faChevronDown} />
+      </div>
     </ProfileContainer>
   );
-}
+};
 
-export const TopNavigation: React.FC<TopNavigationProps> = ({title, toggleShowSideNav, profileData, items = [] }) => {
-
-
+export const TopNavigation: React.FC<TopNavigationProps> = ({ title, toggleShowSideNav, profileData, items = [] }) => {
   return (
     <Navbar>
-      <NavbarBrand>
-        <span />
-      </NavbarBrand>
-      <span>{title}</span>
+      <NavbarBrand title={title} logo={LogoImg} />
       <Items items={items} />
-      <Profile data={profileData}/>
-      <NavbarToggler onClick={toggleShowSideNav} />
+      <Profile data={profileData} />
     </Navbar>
   );
 };

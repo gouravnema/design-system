@@ -24,8 +24,6 @@ const SpriteContainer = styled.div<SpriteProps>`
     &.rounded {
         border-radius: 50%;
     }
-    border: 1px solid green;
-    //padding: 1px;
 `;
 
 

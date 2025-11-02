@@ -17,6 +17,9 @@ export const Default = Template.bind({});
 Default.args = {
   toggleShowSideNav: ()=>{},
   title: "My Application Sample",
+  parameters:{
+    layout: 'center',
+  },
   profileData: {
       name: 'John Doe',
   },

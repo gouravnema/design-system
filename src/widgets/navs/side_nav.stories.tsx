@@ -20,7 +20,7 @@ const ContentArea = styled.div`
 `;
 
 export default {
-  title: 'Widgets/SideNav',
+  title: 'Widgets/navs/SideNav',
   component: SideNav,
   parameters: {
     layout: 'fullscreen', // Use fullscreen layout to demonstrate the side navigation

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {COLORS, SHADOW} from "../theme.constants";
+import {COLORS, SHADOW} from "../../theme.constants";
 import ClassName from "classnames";
 
 const Wrapper = styled.aside`
