@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from "styled-components";
 import {Card} from "../components/cards/card";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faClose } from '@fortawesome/free-solid-svg-icons';
 
 const ModalWrapper = styled.div`
     position: absolute;
@@ -28,6 +30,12 @@ const ModalWrapper = styled.div`
             padding: 9px;
             border-radius: 68%;
             align-self: flex-end;
+            &:hover{
+                box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+            }
+            &:active {
+                box-shadow: inset 0 1px 5px rgba(2, 0, 255, 0.5);
+            }
         }
         .content{
             display: flex;
@@ -47,7 +55,9 @@ interface ModalProps {
 export const Modal: React.FC<ModalProps> = ({children, shouldShow, onClose}) => {
     return shouldShow ? (<ModalWrapper>
         <Card className={'modal-card'}>
-            <div className={'btn-close'} role={'button'} onClick={onClose}>X</div>
+            <div className={'btn-close'} role={'button'} onClick={onClose}>
+                <FontAwesomeIcon icon={faClose}/>
+            </div>
             <div className={'content'}>
                 {children}
             </div>
