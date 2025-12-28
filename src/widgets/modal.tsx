@@ -21,7 +21,7 @@ const ModalWrapper = styled.div`
         height: max-content;
         display: flex;
         flex-direction: column;
-        .btn-close{
+        .close{
             cursor: pointer;
             width: 20px;
             display: flex;
@@ -55,7 +55,7 @@ interface ModalProps {
 export const Modal: React.FC<ModalProps> = ({children, shouldShow, onClose}) => {
     return shouldShow ? (<ModalWrapper>
         <Card className={'modal-card'}>
-            <div className={'btn-close'} role={'button'} onClick={onClose}>
+            <div className={'close'} role={'button'} onClick={onClose}>
                 <FontAwesomeIcon icon={faClose}/>
             </div>
             <div className={'content'}>

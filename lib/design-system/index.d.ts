@@ -9,7 +9,7 @@ export * from './fonts';
 export * from './form';
 export * from './heading';
 export * from './label_text';
-export * from './modal';
+export * from '../widgets/modal';
 export * from './pills';
 export * from './progress_bar';
 export * from './side_nav';

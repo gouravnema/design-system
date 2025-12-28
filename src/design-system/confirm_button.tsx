@@ -1,6 +1,6 @@
 import React from 'react';
 import {PrimaryButton, SecondaryButton} from "./buttons";
-import {Modal} from "./modal";
+import {Modal} from "../widgets/modal";
 import styled from "styled-components";
 
 const ModalContent = styled.div`
