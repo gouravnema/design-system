@@ -26,11 +26,11 @@ export declare const SIZES: {
     xl: string;
 };
 export declare const WEIGHTS: {
-    xs: string;
-    sm: string;
-    md: string;
-    lg: string;
-    xl: string;
+    light: string;
+    regular: string;
+    medium: string;
+    semibold: string;
+    bold: string;
 };
 export declare const RADIUS: {
     small: string;
