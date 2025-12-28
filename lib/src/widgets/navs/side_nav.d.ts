@@ -1,5 +1,5 @@
 import React from "react";
-interface SideNavLink {
+export interface SideNavLink {
     order: number;
     active: boolean;
     onClick: (event: React.MouseEvent<HTMLAnchorElement>) => void;

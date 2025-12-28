@@ -50,7 +50,6 @@ interface ProfileData {
 }
 
 export interface TopNavigationProps {
-  toggleShowSideNav: () => void;
   items?: ItemType;
   title?: string;
   profileData: ProfileData;

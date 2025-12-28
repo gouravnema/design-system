@@ -66,7 +66,7 @@ const Header = styled.div`
 `;
 
 
-interface SideNavLink {
+export interface SideNavLink {
     order: number;
     active: boolean;
     onClick: (event: React.MouseEvent<HTMLAnchorElement>) => void;
@@ -80,7 +80,7 @@ interface SideNavProps {
     links: { [key: string]: SideNavLink };
 }
 
-export const SideNav: React.FC<SideNavProps> = ({logo, links}) => {
+export const SideNav: React.FC<SideNavProps> = ({links}) => {
     return <Wrapper>
         <Header></Header>
         <Body>

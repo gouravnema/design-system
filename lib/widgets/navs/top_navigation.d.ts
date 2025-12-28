@@ -17,7 +17,6 @@ interface ProfileData {
     avatarUrl?: string;
 }
 export interface TopNavigationProps {
-    toggleShowSideNav: () => void;
     items?: ItemType;
     title?: string;
     profileData: ProfileData;
