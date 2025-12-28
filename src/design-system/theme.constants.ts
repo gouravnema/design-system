@@ -22,19 +22,19 @@ export const TYPOGRAPHGY  = {
 }
 
 export const SIZES = {
-    xs: '12px',
+    xs: '8px',
     sm: '12px',
-    md: '12px',
-    lg: '12px',
-    xl: '12px',
+    md: '16px',
+    lg: '20px',
+    xl: '24px',
 }
 
 export const WEIGHTS = {
-    xs: '300px',
-    sm: '300px',
-    md: '300px',
-    lg: '300px',
-    xl: '300px',
+    light: '300',
+    regular: '400',
+    medium: '500',
+    semibold: '600',
+    bold: '700',
 }
 
 export const RADIUS = {
