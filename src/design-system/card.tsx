@@ -1,9 +1,8 @@
 import styled from "styled-components";
 import {COLORS, RADIUS, SHADOW} from "./theme.constants";
 
-interface CardProps extends React.HTMLAttributes<HTMLDivElement> {}
 
-export const Card = styled.div<CardProps>`
+export const Card = styled.div`
     background-color: ${COLORS.card_background};
     padding: 10px;
     border-radius: ${RADIUS.medium};
