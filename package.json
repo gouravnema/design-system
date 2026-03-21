@@ -12,8 +12,9 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "scripts": {
-    "clean": "rm -rf lib",
+    "clean": "rm -rf lib docs",
     "build": "npm run clean && rslib build --env-mode library && npm run build:types",
+    "build:storybook": "storybook build -o docs",
     "build:types": "tsc -p tsconfig.build.json",
     "dev": "rslib dev --open",
     "format": "prettier --write .",

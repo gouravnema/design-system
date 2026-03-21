@@ -2,7 +2,6 @@ export * from './background';
 export * from './buttons';
 export * from './card';
 export * from './centered';
-export * from './confirm_button';
 export * from './date_formatter';
 export * from './doughnutChart';
 export * from './fonts';
