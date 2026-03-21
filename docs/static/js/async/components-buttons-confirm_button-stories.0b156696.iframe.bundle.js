@@ -1,1 +1,0 @@
-(self.webpackChunk_gouravnema_design_system=self.webpackChunk_gouravnema_design_system||[]).push([["352"],{"./src/components/buttons/confirm_button.stories.tsx":function(){}}]);
