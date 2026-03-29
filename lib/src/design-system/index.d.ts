@@ -17,3 +17,5 @@ export * from './textinput';
 export * from './theme.constants';
 export * from './time_formatter';
 export * from '../widgets/navs/top_navigation';
+export * from '../widgets/text/parsed_text';
+export * from '../typography/text';
