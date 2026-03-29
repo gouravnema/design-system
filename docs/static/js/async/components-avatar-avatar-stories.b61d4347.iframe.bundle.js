@@ -1,0 +1,7 @@
+"use strict";(self.webpackChunk_gouravnema_design_system=self.webpackChunk_gouravnema_design_system||[]).push([["84"],{"./src/components/avatar/avatar.stories.tsx"(e,t,s){s.r(t),s.d(t,{default:()=>o,Default:()=>m,NoImg:()=>p,__namedExportsOrder:()=>c});var a=s("./node_modules/react/index.js"),r=s("./node_modules/styled-components/dist/styled-components.browser.esm.js");let i=s.p+"static/image/static/media/heads_sprite.535371b9.webp",n=r.Ay.img`
+  width: ${e=>e.size}px;
+  height: ${e=>e.size}px;
+  border-radius: 50%;
+  object-fit: cover;
+`,d=e=>{let{size:t=50,src:s,alt:r="User Avatar",...d}=e;return a.createElement(n,{size:t,src:s||i,alt:r,...d})};d.__docgenInfo={description:"",methods:[],displayName:"Avatar",props:{size:{required:!1,tsType:{name:"number"},description:"",defaultValue:{value:"50",computed:!1}},src:{required:!1,tsType:{name:"string"},description:""},alt:{required:!1,tsType:{name:"string"},description:"",defaultValue:{value:"'User Avatar'",computed:!1}}}};let o={title:"Components/Avatar",component:d},l=e=>a.createElement(d,e),m=l.bind({});m.args={size:40,src:"https://via.placeholder.com/40",alt:"User Avatar"};let p=l.bind({});p.args={size:40,alt:"User Avatar"};let c=["Default","NoImg"]}}]);
+//# sourceMappingURL=components-avatar-avatar-stories.b61d4347.iframe.bundle.js.map

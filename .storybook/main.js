@@ -1,4 +1,3 @@
-import { StorybookConfig } from 'storybook-react-rsbuild'
 
 const config = {
   framework: {
