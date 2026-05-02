@@ -57,7 +57,6 @@ export const Switch = ({ defaultState = false, onChange }: SwitchProps) => {
 
   return (
     <SwitchContainer
-      isActive={internalState}
       data-active={internalState}
       onClick={handleToggle}
       role="switch"
