@@ -4,6 +4,7 @@ export * from './src/components/cards/card';
 export * from './src/components/charts/doughnutChart';
 export * from './src/components/pills/pills';
 export * from './src/components/textbox/textinput';
+export * from './src/components/switch/switch';
 export * from './src/layouts/background';
 export * from './src/layouts/centered';
 export * from './src/layouts/tabs';
