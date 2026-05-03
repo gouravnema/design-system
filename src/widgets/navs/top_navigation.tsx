@@ -1,8 +1,7 @@
 import React, { SyntheticEvent } from 'react';
 import styled from 'styled-components';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
-import { Card } from '../../design-system';
-import { Silhouette } from '../../components/sprites/people/silhouette';
+import { Card, Silhouette } from '../../components';
 import { NavbarBrand } from './navbar_brand';
 import LogoImg from './logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -17,7 +16,6 @@ const Navbar = styled(Card)`
     display: flex;
     gap: 10px;
     font-size: 1.25vw;
-    max-font-size: 1rem;
 `;
 
 const ItemViewContainer = styled.div`

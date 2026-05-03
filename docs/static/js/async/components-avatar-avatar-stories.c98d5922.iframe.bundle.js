@@ -1,0 +1,7 @@
+"use strict";(self.webpackChunk_gouravnema_design_system=self.webpackChunk_gouravnema_design_system||[]).push([["84"],{"./src/components/avatar/avatar.stories.tsx"(e,t,a){a.r(t),a.d(t,{Default:()=>i,NoImg:()=>d,__namedExportsOrder:()=>c,default:()=>n});var s=a("./node_modules/react/index.js"),r=a("./src/components/avatar/avatar.tsx");let n={title:"Components/Avatar",component:r.e},o=e=>s.createElement(r.e,e),i=o.bind({});i.args={size:40,src:"https://via.placeholder.com/40",alt:"User Avatar"};let d=o.bind({});d.args={size:40,alt:"User Avatar"};let c=["Default","NoImg"]},"./src/components/avatar/avatar.tsx"(e,t,a){a.d(t,{e:()=>i});var s=a("./node_modules/react/index.js"),r=a("./node_modules/styled-components/dist/styled-components.browser.esm.js");let n=a.p+"static/image/static/media/heads_sprite.535371b9.webp",o=r.Ay.img`
+  width: ${e=>e.size}px;
+  height: ${e=>e.size}px;
+  border-radius: 50%;
+  object-fit: cover;
+`,i=e=>{let{size:t=50,src:a,alt:r="User Avatar",...i}=e;return s.createElement(o,{size:t,src:a||n,alt:r,...i})};i.__docgenInfo={description:"",methods:[],displayName:"Avatar",props:{size:{required:!1,tsType:{name:"number"},description:"",defaultValue:{value:"50",computed:!1}},src:{required:!1,tsType:{name:"string"},description:""},alt:{required:!1,tsType:{name:"string"},description:"",defaultValue:{value:"'User Avatar'",computed:!1}}}}}}]);
+//# sourceMappingURL=components-avatar-avatar-stories.c98d5922.iframe.bundle.js.map

@@ -1,1 +1,4 @@
-export * from './design-system/index'; // Re-export all components from the design-system index
+export * from './theme';
+export * from './components';
+export * from './widgets';
+export * from './typography';

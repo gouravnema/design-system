@@ -1,4 +1,4 @@
-export * from './src/components/time_formatter';
+export * from './src/widgets/datetime/time_formatter';
 export * from './src/components/buttons/buttons';
 export * from './src/components/cards/card';
 export * from './src/components/charts/doughnutChart';
