@@ -1,4 +1,8 @@
+import { version } from '../package.json' with { type: 'json' };
+
+
 export * from './theme';
-export * as Components from './components';
-export * as Widgets from './widgets';
+export *  from './components';
+export * from './widgets';
 export * from './typography';
+export const Version = version;

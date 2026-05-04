@@ -1,4 +1,5 @@
 export * from './theme';
-export * as Components from './components';
-export * as Widgets from './widgets';
+export * from './components';
+export * from './widgets';
 export * from './typography';
+export declare const Version: string;
