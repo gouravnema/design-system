@@ -1,6 +1,6 @@
 {
   "name": "@gouravnema/design-system",
-  "version": "1.0.53",
+  "version": "1.0.54",
   "type": "module",
   "main": "lib/index.js",
   "module": "lib/index.js",
