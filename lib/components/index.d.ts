@@ -6,3 +6,5 @@ export * from './pills/pills';
 export * from './sprites/sprite_builder';
 export * from './sprites/people/silhouette';
 export * from './textbox/textinput';
+export * from './buttons/buttons';
+export * from './buttons/confirm_button';
