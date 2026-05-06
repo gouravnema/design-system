@@ -14,18 +14,21 @@ interface SwitchContainerProps {
 
 const SwitchContainer = styled.button<SwitchContainerProps>`
     position: relative;
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: flex-start;
-    width: 52px;
-    height: 32px;
-    padding: 2px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 13 / 8 ;
+    min-width: 13px;
+    min-height: 8px;
     background-color: ${(props: any) => (props.isActive ? COLORS.green : COLORS.medium_gray)};
     border: none;
-    border-radius: 16px;
+    border-radius: 50vh;
     cursor: pointer;
     transition: background-color 0.3s ease;
     outline: none;
+    box-sizing: border-box;
 
     &:hover {
         opacity: 0.8;
@@ -38,16 +41,18 @@ const SwitchContainer = styled.button<SwitchContainerProps>`
 
 const SwitchToggle = styled.div`
     position: absolute;
-    width: 28px;
-    height: 28px;
+    width: auto;
+    height: 100%;
+    aspect-ratio: 1;
     background-color: white;
     border-radius: 50%;
     transition: transform 0.3s ease;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    left: 2px;
+    left: 0;
+    top: 0;
 
     ${SwitchContainer}[data-active='true'] & {
-        transform: translateX(20px);
+        transform: translateX(80%);
     }
 `;
 
@@ -59,7 +64,6 @@ export const Switch = ({ defaultState = false, onChange }: SwitchProps) => {
     setInternalState(newState);
     onChange?.(newState);
   };
-  debugger
 
   return (
     <SwitchContainer

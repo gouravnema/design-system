@@ -1,4 +1,4 @@
-/*! For license information please see widgets-navs-top_navigation-stories.edad70f4.iframe.bundle.js.LICENSE.txt */
+/*! For license information please see widgets-navs-top_navigation-stories.461d3243.iframe.bundle.js.LICENSE.txt */
 (self.webpackChunk_gouravnema_design_system=self.webpackChunk_gouravnema_design_system||[]).push([["821"],{"./src/widgets/navs/top_navigation.stories.tsx"(e,t,n){"use strict";n.r(t),n.d(t,{default:()=>w,NoItems:()=>C,Default:()=>E,__namedExportsOrder:()=>j});var r=n("./node_modules/react/index.js"),o=n("./node_modules/styled-components/dist/styled-components.browser.esm.js");n("./src/components/avatar/avatar.tsx");var a=n("./src/components/cards/card.tsx");n("./src/components/charts/doughnutChart.tsx"),n("./src/components/switch/switch.tsx"),n("./src/components/pills/pills.tsx"),n("./src/components/sprites/sprite_builder.tsx");var s=n("./src/components/sprites/people/silhouette.tsx");n("./src/components/textbox/textinput.tsx"),n("./src/components/buttons/buttons.tsx"),n("./src/components/buttons/confirm_button.tsx");var i=n("./src/theme.constants.ts");let d=o.Ay.div`
     position: relative;
     padding: 5px 10px;
@@ -40,7 +40,7 @@
         cursor: pointer;
         text-decoration: underline;
     }
-`,g=e=>{let{item:t}=e;return r.createElement(p,{key:t.id,onClick:t.onClick},t.icon&&r.createElement("span",{className:"icon"},r.createElement("i",{className:`icon-${t.icon}`})),r.createElement("span",{className:"label"},t.label))},x=e=>{let{collection:t}=e;return r.createElement("div",{key:t.label},r.createElement("span",null,t.label),r.createElement("div",null,t.items.map(e=>r.createElement(g,{key:e.id,item:e}))))},y=o.Ay.div`
+`,g=e=>{let{item:t}=e;return r.createElement(p,{key:t.id,onClick:t.onClick},t.icon&&r.createElement("span",{className:"icon"},r.createElement("i",{className:`icon-${t.icon}`})),r.createElement("span",{className:"label"},t.label))},y=e=>{let{collection:t}=e;return r.createElement("div",{key:t.label},r.createElement("span",null,t.label),r.createElement("div",null,t.items.map(e=>r.createElement(g,{key:e.id,item:e}))))},x=o.Ay.div`
     display: flex;
     gap: 5px;
     font-weight: 500;
@@ -62,7 +62,7 @@
         justify-content: center;
         align-items: center;
     }
-`,h=e=>{let{items:t}=e;return r.createElement(y,null,t.map(e=>"items"in e?r.createElement(x,{key:e.label,collection:e}):r.createElement(g,{key:e.id,item:e})))},v=e=>{let{data:t}=e;return r.createElement(b,null,r.createElement("div",{className:"img-holder"},(null==t?void 0:t.avatarUrl)&&r.createElement("img",{src:t.avatarUrl,alt:t.name})||r.createElement(s.R,{code:"head_1_2",rounded:!0,size:4})),r.createElement("div",null,null==t?void 0:t.name,r.createElement(c.gc,{icon:m.Jt$})))},f=e=>{let{title:t,profileData:n,items:o=[]}=e;return r.createElement(u,null,r.createElement(d,{title:t,logo:l}),r.createElement(h,{items:o}),r.createElement(v,{data:n}))};f.__docgenInfo={description:"",methods:[],displayName:"TopNavigation",props:{items:{required:!1,tsType:{name:"Array",elements:[{name:"union",raw:"MenuItem | MenuCollection",elements:[{name:"signature",type:"object",raw:"{\n  label: string;\n  icon?: IconProp;\n  id: string;\n  onClick: (e: SyntheticEvent) => void;\n  isSelected?: boolean;\n}",signature:{properties:[{key:"label",value:{name:"string",required:!0}},{key:"icon",value:{name:"IconProp",required:!1}},{key:"id",value:{name:"string",required:!0}},{key:"onClick",value:{name:"signature",type:"function",raw:"(e: SyntheticEvent) => void",signature:{arguments:[{type:{name:"SyntheticEvent"},name:"e"}],return:{name:"void"}},required:!0}},{key:"isSelected",value:{name:"boolean",required:!1}}]}},{name:"signature",type:"object",raw:"{\n  items: MenuItem[];\n  label: string;\n}",signature:{properties:[{key:"items",value:{name:"Array",elements:[{name:"signature",type:"object",raw:"{\n  label: string;\n  icon?: IconProp;\n  id: string;\n  onClick: (e: SyntheticEvent) => void;\n  isSelected?: boolean;\n}",signature:{properties:[{key:"label",value:{name:"string",required:!0}},{key:"icon",value:{name:"IconProp",required:!1}},{key:"id",value:{name:"string",required:!0}},{key:"onClick",value:{name:"signature",type:"function",raw:"(e: SyntheticEvent) => void",signature:{arguments:[{type:{name:"SyntheticEvent"},name:"e"}],return:{name:"void"}},required:!0}},{key:"isSelected",value:{name:"boolean",required:!1}}]}}],raw:"MenuItem[]",required:!0}},{key:"label",value:{name:"string",required:!0}}]}}]}],raw:"Array<MenuItem | MenuCollection>"},description:"",defaultValue:{value:"[]",computed:!1}},title:{required:!1,tsType:{name:"string"},description:""},profileData:{required:!0,tsType:{name:"ProfileData"},description:""}}};let w={title:"Widgets/Navs/TopNavigation",component:f},_=e=>r.createElement(f,e),k=e=>()=>console.log(`${e} action triggered`),E=_.bind({});E.args={toggleShowSideNav:()=>{},title:"My Application Sample",parameters:{layout:"center"},profileData:{name:"John Doe"},items:[{id:"home",label:"Home",onClick:k("item-click-home")},{id:"settings",label:"Settings",onClick:k("item-click-settings")}]};let C=_.bind({});C.args={toggleShowSideNav:k("toggleShowSideNav"),items:[]};let j=["Default","NoItems"]},"./src/components/avatar/avatar.tsx"(e,t,n){"use strict";n.d(t,{e:()=>i});var r=n("./node_modules/react/index.js"),o=n("./node_modules/styled-components/dist/styled-components.browser.esm.js");let a=n.p+"static/image/static/media/heads_sprite.535371b9.webp",s=o.Ay.img`
+`,h=e=>{let{items:t}=e;return r.createElement(x,null,t.map(e=>"items"in e?r.createElement(y,{key:e.label,collection:e}):r.createElement(g,{key:e.id,item:e})))},v=e=>{let{data:t}=e;return r.createElement(b,null,r.createElement("div",{className:"img-holder"},(null==t?void 0:t.avatarUrl)&&r.createElement("img",{src:t.avatarUrl,alt:t.name})||r.createElement(s.R,{code:"head_1_2",rounded:!0,size:4})),r.createElement("div",null,null==t?void 0:t.name,r.createElement(c.gc,{icon:m.Jt$})))},f=e=>{let{title:t,profileData:n,items:o=[]}=e;return r.createElement(u,null,r.createElement(d,{title:t,logo:l}),r.createElement(h,{items:o}),r.createElement(v,{data:n}))};f.__docgenInfo={description:"",methods:[],displayName:"TopNavigation",props:{items:{required:!1,tsType:{name:"Array",elements:[{name:"union",raw:"MenuItem | MenuCollection",elements:[{name:"signature",type:"object",raw:"{\n  label: string;\n  icon?: IconProp;\n  id: string;\n  onClick: (e: SyntheticEvent) => void;\n  isSelected?: boolean;\n}",signature:{properties:[{key:"label",value:{name:"string",required:!0}},{key:"icon",value:{name:"IconProp",required:!1}},{key:"id",value:{name:"string",required:!0}},{key:"onClick",value:{name:"signature",type:"function",raw:"(e: SyntheticEvent) => void",signature:{arguments:[{type:{name:"SyntheticEvent"},name:"e"}],return:{name:"void"}},required:!0}},{key:"isSelected",value:{name:"boolean",required:!1}}]}},{name:"signature",type:"object",raw:"{\n  items: MenuItem[];\n  label: string;\n}",signature:{properties:[{key:"items",value:{name:"Array",elements:[{name:"signature",type:"object",raw:"{\n  label: string;\n  icon?: IconProp;\n  id: string;\n  onClick: (e: SyntheticEvent) => void;\n  isSelected?: boolean;\n}",signature:{properties:[{key:"label",value:{name:"string",required:!0}},{key:"icon",value:{name:"IconProp",required:!1}},{key:"id",value:{name:"string",required:!0}},{key:"onClick",value:{name:"signature",type:"function",raw:"(e: SyntheticEvent) => void",signature:{arguments:[{type:{name:"SyntheticEvent"},name:"e"}],return:{name:"void"}},required:!0}},{key:"isSelected",value:{name:"boolean",required:!1}}]}}],raw:"MenuItem[]",required:!0}},{key:"label",value:{name:"string",required:!0}}]}}]}],raw:"Array<MenuItem | MenuCollection>"},description:"",defaultValue:{value:"[]",computed:!1}},title:{required:!1,tsType:{name:"string"},description:""},profileData:{required:!0,tsType:{name:"ProfileData"},description:""}}};let w={title:"Widgets/Navs/TopNavigation",component:f},_=e=>r.createElement(f,e),k=e=>()=>console.log(`${e} action triggered`),E=_.bind({});E.args={toggleShowSideNav:()=>{},title:"My Application Sample",parameters:{layout:"center"},profileData:{name:"John Doe"},items:[{id:"home",label:"Home",onClick:k("item-click-home")},{id:"settings",label:"Settings",onClick:k("item-click-settings")}]};let C=_.bind({});C.args={toggleShowSideNav:k("toggleShowSideNav"),items:[]};let j=["Default","NoItems"]},"./src/components/avatar/avatar.tsx"(e,t,n){"use strict";n.d(t,{e:()=>i});var r=n("./node_modules/react/index.js"),o=n("./node_modules/styled-components/dist/styled-components.browser.esm.js");let a=n.p+"static/image/static/media/heads_sprite.535371b9.webp",s=o.Ay.img`
   width: ${e=>e.size}px;
   height: ${e=>e.size}px;
   border-radius: 50%;
@@ -125,17 +125,17 @@
      &:hover {
             background: ${a.l.dark_green};
      }
- `,x=(0,o.Ay)(p)`
+ `,y=(0,o.Ay)(p)`
     background: ${a.l.orange};
     &:hover {
         background: ${a.l.dark_orange};
     }
-`,y=(0,o.Ay)(p)`
+`,x=(0,o.Ay)(p)`
     background: ${a.l.red};
     &:hover {
         background: ${a.l.dark_red};
     }
-`,b=e=>r.createElement(y,e,r.createElement(i.gc,{icon:s.APi})),h=e=>r.createElement(x,e,r.createElement(i.gc,{icon:s.G1Y})),v=e=>r.createElement(g,e,r.createElement(i.gc,{icon:s.ijD}));b.__docgenInfo={description:"",methods:[],displayName:"TimerDoneButton"},h.__docgenInfo={description:"",methods:[],displayName:"TimerPauseButton"},v.__docgenInfo={description:"",methods:[],displayName:"TimerPlayButton"}},"./src/components/buttons/confirm_button.tsx"(e,t,n){"use strict";n.d(t,{Z:()=>d});var r=n("./node_modules/react/index.js"),o=n("./src/components/buttons/buttons.tsx"),a=n("./src/widgets/modal/modal.tsx"),s=n("./node_modules/styled-components/dist/styled-components.browser.esm.js");let i=s.Ay.div`
+`,b=e=>r.createElement(x,e,r.createElement(i.gc,{icon:s.APi})),h=e=>r.createElement(y,e,r.createElement(i.gc,{icon:s.G1Y})),v=e=>r.createElement(g,e,r.createElement(i.gc,{icon:s.ijD}));b.__docgenInfo={description:"",methods:[],displayName:"TimerDoneButton"},h.__docgenInfo={description:"",methods:[],displayName:"TimerPauseButton"},v.__docgenInfo={description:"",methods:[],displayName:"TimerPlayButton"}},"./src/components/buttons/confirm_button.tsx"(e,t,n){"use strict";n.d(t,{Z:()=>d});var r=n("./node_modules/react/index.js"),o=n("./src/components/buttons/buttons.tsx"),a=n("./src/widgets/modal/modal.tsx"),s=n("./node_modules/styled-components/dist/styled-components.browser.esm.js");let i=s.Ay.div`
     padding:10px;
     display: flex;
     flex-direction: column;
@@ -149,7 +149,7 @@
         justify-content: flex-end;
         gap: 10px;
     }
-`,d=e=>{let{onConfirm:t=()=>{},onCancel:n=()=>{},label:s="",confirmText:d="Are you sure?",confirmTitle:l="Confirmation?",ButtonComponent:c=o.tA,...m}=e,[u,p]=r.useState(!1),g=r.createElement(a.a,{onClose:()=>p(!1),shouldShow:u},r.createElement(i,{className:"confirm-modal"},r.createElement("h3",null,l),r.createElement("p",{className:"description"},d),r.createElement("div",{className:"confirm-actions"},r.createElement(o.tA,{onClick:e=>{p(!1),n(e)}},"Cancel"),r.createElement(o.jn,{onClick:e=>{p(!1),t(e)}},"Confirm")))),x=r.createElement(c,{...m,onClick:e=>{e.preventDefault(),p(!0)}},s);return r.createElement(r.Fragment,null,u?g:x)};d.__docgenInfo={description:"",methods:[],displayName:"ConfirmButton",props:{onConfirm:{required:!1,tsType:{name:"signature",type:"function",raw:"(event: React.MouseEvent<HTMLButtonElement>) => void",signature:{arguments:[{type:{name:"ReactMouseEvent",raw:"React.MouseEvent<HTMLButtonElement>",elements:[{name:"HTMLButtonElement"}]},name:"event"}],return:{name:"void"}}},description:"",defaultValue:{value:"() => {\n}",computed:!1}},onCancel:{required:!1,tsType:{name:"signature",type:"function",raw:"(event: React.MouseEvent<HTMLButtonElement>) => void",signature:{arguments:[{type:{name:"ReactMouseEvent",raw:"React.MouseEvent<HTMLButtonElement>",elements:[{name:"HTMLButtonElement"}]},name:"event"}],return:{name:"void"}}},description:"",defaultValue:{value:"() => {\n}",computed:!1}},label:{required:!1,tsType:{name:"string"},description:"",defaultValue:{value:'""',computed:!1}},confirmText:{required:!1,tsType:{name:"string"},description:"",defaultValue:{value:'"Are you sure?"',computed:!1}},confirmTitle:{required:!1,tsType:{name:"string"},description:"",defaultValue:{value:'"Confirmation?"',computed:!1}},ButtonComponent:{required:!1,tsType:{name:"ReactComponentType",raw:"React.ComponentType<any>",elements:[{name:"any"}]},description:"",defaultValue:{value:"styled(Buttons)`\n    background-color: ${COLORS.light_gray};\n    color: ${COLORS.text_dark};\n    border: 1px solid ${COLORS.medium_gray};\n    &:hover {\n        background-color: ${COLORS.medium_gray};\n        transform: translateY(-1px);\n        box-shadow: 0 2px 5px rgba(0, 122, 255, 0.3);\n    }\n`",computed:!1}}}}},"./src/components/cards/card.tsx"(e,t,n){"use strict";n.d(t,{Z:()=>a});var r=n("./node_modules/styled-components/dist/styled-components.browser.esm.js"),o=n("./src/theme.constants.ts");let a=r.Ay.div`
+`,d=e=>{let{onConfirm:t=()=>{},onCancel:n=()=>{},label:s="",confirmText:d="Are you sure?",confirmTitle:l="Confirmation?",ButtonComponent:c=o.tA,...m}=e,[u,p]=r.useState(!1),g=r.createElement(a.a,{onClose:()=>p(!1),shouldShow:u},r.createElement(i,{className:"confirm-modal"},r.createElement("h3",null,l),r.createElement("p",{className:"description"},d),r.createElement("div",{className:"confirm-actions"},r.createElement(o.tA,{onClick:e=>{p(!1),n(e)}},"Cancel"),r.createElement(o.jn,{onClick:e=>{p(!1),t(e)}},"Confirm")))),y=r.createElement(c,{...m,onClick:e=>{e.preventDefault(),p(!0)}},s);return r.createElement(r.Fragment,null,u?g:y)};d.__docgenInfo={description:"",methods:[],displayName:"ConfirmButton",props:{onConfirm:{required:!1,tsType:{name:"signature",type:"function",raw:"(event: React.MouseEvent<HTMLButtonElement>) => void",signature:{arguments:[{type:{name:"ReactMouseEvent",raw:"React.MouseEvent<HTMLButtonElement>",elements:[{name:"HTMLButtonElement"}]},name:"event"}],return:{name:"void"}}},description:"",defaultValue:{value:"() => {\n}",computed:!1}},onCancel:{required:!1,tsType:{name:"signature",type:"function",raw:"(event: React.MouseEvent<HTMLButtonElement>) => void",signature:{arguments:[{type:{name:"ReactMouseEvent",raw:"React.MouseEvent<HTMLButtonElement>",elements:[{name:"HTMLButtonElement"}]},name:"event"}],return:{name:"void"}}},description:"",defaultValue:{value:"() => {\n}",computed:!1}},label:{required:!1,tsType:{name:"string"},description:"",defaultValue:{value:'""',computed:!1}},confirmText:{required:!1,tsType:{name:"string"},description:"",defaultValue:{value:'"Are you sure?"',computed:!1}},confirmTitle:{required:!1,tsType:{name:"string"},description:"",defaultValue:{value:'"Confirmation?"',computed:!1}},ButtonComponent:{required:!1,tsType:{name:"ReactComponentType",raw:"React.ComponentType<any>",elements:[{name:"any"}]},description:"",defaultValue:{value:"styled(Buttons)`\n    background-color: ${COLORS.light_gray};\n    color: ${COLORS.text_dark};\n    border: 1px solid ${COLORS.medium_gray};\n    &:hover {\n        background-color: ${COLORS.medium_gray};\n        transform: translateY(-1px);\n        box-shadow: 0 2px 5px rgba(0, 122, 255, 0.3);\n    }\n`",computed:!1}}}}},"./src/components/cards/card.tsx"(e,t,n){"use strict";n.d(t,{Z:()=>a});var r=n("./node_modules/styled-components/dist/styled-components.browser.esm.js"),o=n("./src/theme.constants.ts");let a=r.Ay.div`
     background-color: ${o.lm.card_background};
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
@@ -186,18 +186,21 @@
     max-width: ${e=>e.maxSize};
 `,d=e=>{let{rounded:t=!1,width:n,height:r,positionX:a,positionY:d,...l}=e;return o.createElement(i,{className:s()({rounded:t}),width:n,height:r,positionX:a,positionY:d,...l})};d.__docgenInfo={description:"",methods:[],displayName:"Sprite",props:{width:{required:!0,tsType:{name:"number"},description:""},height:{required:!0,tsType:{name:"number"},description:""},positionX:{required:!0,tsType:{name:"number"},description:""},positionY:{required:!0,tsType:{name:"number"},description:""},src:{required:!0,tsType:{name:"string"},description:""},rounded:{required:!1,tsType:{name:"boolean"},description:"",defaultValue:{value:"false",computed:!1}},size:{required:!1,tsType:{name:"number"},description:""},maxSize:{required:!1,tsType:{name:"string"},description:""}}}},"./src/components/switch/switch.tsx"(e,t,n){"use strict";n.d(t,{d:()=>d});var r=n("./node_modules/react/index.js"),o=n("./node_modules/styled-components/dist/styled-components.browser.esm.js"),a=n("./src/theme.constants.ts");let s=o.Ay.button`
     position: relative;
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: flex-start;
-    width: 52px;
-    height: 32px;
-    padding: 2px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 13 / 8 ;
+    min-width: 13px;
+    min-height: 8px;
     background-color: ${e=>e.isActive?a.lm.green:a.lm.medium_gray};
     border: none;
-    border-radius: 16px;
+    border-radius: 50vh;
     cursor: pointer;
     transition: background-color 0.3s ease;
     outline: none;
+    box-sizing: border-box;
 
     &:hover {
         opacity: 0.8;
@@ -208,16 +211,18 @@
     }
 `,i=o.Ay.div`
     position: absolute;
-    width: 28px;
-    height: 28px;
+    width: auto;
+    height: 100%;
+    aspect-ratio: 1;
     background-color: white;
     border-radius: 50%;
     transition: transform 0.3s ease;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    left: 2px;
+    left: 0;
+    top: 0;
 
     ${s}[data-active='true'] & {
-        transform: translateX(20px);
+        transform: translateX(80%);
     }
 `,d=e=>{let{defaultState:t=!1,onChange:n}=e,[o,a]=r.useState(t);return r.createElement(s,{"data-active":o,onClick:()=>{let e=!o;a(e),null==n||n(e)},role:"switch","aria-checked":o,type:"button",isActive:o},r.createElement(i,null))};d.__docgenInfo={description:"",methods:[],displayName:"Switch",props:{defaultState:{required:!1,tsType:{name:"boolean"},description:"",defaultValue:{value:"false",computed:!1}},onChange:{required:!1,tsType:{name:"signature",type:"function",raw:"(value: boolean) => void",signature:{arguments:[{type:{name:"boolean"},name:"value"}],return:{name:"void"}}},description:""}}}},"./src/components/textbox/textinput.tsx"(e,t,n){"use strict";n.d(t,{k:()=>i});var r=n("./node_modules/styled-components/dist/styled-components.browser.esm.js"),o=n("./node_modules/react/index.js"),a=n("./src/theme.constants.ts");let s=r.Ay.div`
     margin-bottom: 20px;
@@ -278,4 +283,4 @@
         }
     }
 `,l=e=>{let{children:t,shouldShow:n,onClose:o}=e;return n?r.createElement(d,null,r.createElement(a.Z,{className:"modal-card"},r.createElement("div",{className:"close",role:"button",onClick:o},r.createElement(s.gc,{icon:i.yYc})),r.createElement("div",{className:"content"},t))):null};l.__docgenInfo={description:"",methods:[],displayName:"Modal",props:{children:{required:!0,tsType:{name:"ReactReactNode",raw:"React.ReactNode"},description:""},shouldShow:{required:!0,tsType:{name:"boolean"},description:""},onClose:{required:!0,tsType:{name:"signature",type:"function",raw:"() => void",signature:{arguments:[],return:{name:"void"}}},description:""}}}},"./node_modules/classnames/index.js"(e){!function(){"use strict";var t={}.hasOwnProperty;function n(){for(var e="",o=0;o<arguments.length;o++){var a=arguments[o];a&&(e=r(e,function(e){if("string"==typeof e||"number"==typeof e)return e;if("object"!=typeof e)return"";if(Array.isArray(e))return n.apply(null,e);if(e.toString!==Object.prototype.toString&&!e.toString.toString().includes("[native code]"))return e.toString();var o="";for(var a in e)t.call(e,a)&&e[a]&&(o=r(o,a));return o}(a)))}return e}function r(e,t){return t?e?e+" "+t:e+t:e}e.exports?(n.default=n,e.exports=n):"function"==typeof define&&"object"==typeof define.amd&&define.amd?define("classnames",[],function(){return n}):window.classNames=n}()}}]);
-//# sourceMappingURL=widgets-navs-top_navigation-stories.edad70f4.iframe.bundle.js.map
+//# sourceMappingURL=widgets-navs-top_navigation-stories.461d3243.iframe.bundle.js.map

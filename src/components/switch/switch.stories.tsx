@@ -1,7 +1,21 @@
+import React from 'react';
 import { Switch } from './switch';
+import styled from 'styled-components';
+
+const Wrapper = styled.div`
+  width: 40px;
+`;
+
+const Wrapped = (props) => {
+  return (
+    <Wrapper>
+      <Switch {...props} />
+    </Wrapper>
+  );
+};
 
 const meta = {
-  component: Switch,
+  component: Wrapped,
   title: 'Components/Switch',
   parameters: {
     layout: 'centered',
