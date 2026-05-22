@@ -50,7 +50,7 @@ jobs:
 
       - name: Push new version and tag
         run: |
-          git push origin main
+          git push origin neomorphic
           git push origin --tags
 
       - name: Publish to GitHub Packages
