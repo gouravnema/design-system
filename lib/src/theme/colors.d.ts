@@ -1,4 +1,7 @@
 export declare const COLORS: {
+    base: string;
+    baseLight: string;
+    baseDark: string;
     blue: string;
     green: string;
     dark_green: string;
@@ -6,11 +9,11 @@ export declare const COLORS: {
     dark_red: string;
     orange: string;
     dark_orange: string;
-    light_gray: string;
-    medium_gray: string;
-    dark_gray: string;
     text_dark: string;
     text_light: string;
     background: string;
     card_background: string;
+    light_gray: string;
+    medium_gray: string;
+    dark_gray: string;
 };
