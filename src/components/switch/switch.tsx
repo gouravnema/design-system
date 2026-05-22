@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { COLORS } from '../../theme.constants';
+import { COLORS, SHADOW } from '../../theme.constants';
 
 export type SwitchProps = {
   defaultState?: boolean;
@@ -22,20 +22,21 @@ const SwitchContainer = styled.button<SwitchContainerProps>`
     aspect-ratio: 13 / 8 ;
     min-width: 13px;
     min-height: 8px;
-    background-color: ${(props: any) => (props.isActive ? COLORS.green : COLORS.medium_gray)};
+    background-color: ${(props: any) => (props.isActive ? COLORS.green : COLORS.base)};
     border: none;
     border-radius: 50vh;
     cursor: pointer;
     transition: background-color 0.3s ease;
     outline: none;
     box-sizing: border-box;
+    box-shadow: ${(props: any) => (props.isActive ? SHADOW.medium : SHADOW.insetLight)};
 
     &:hover {
-        opacity: 0.8;
+        box-shadow: ${(props: any) => (props.isActive ? SHADOW.large : SHADOW.insetMedium)};
     }
 
     &:focus {
-        box-shadow: 0 0 0 3px rgba(52, 199, 89, 0.1);
+        box-shadow: 0 0 0 3px rgba(95, 179, 109, 0.2);
     }
 `;
 
@@ -44,10 +45,10 @@ const SwitchToggle = styled.div`
     width: auto;
     height: 100%;
     aspect-ratio: 1;
-    background-color: white;
+    background-color: ${COLORS.baseLight};
     border-radius: 50%;
     transition: transform 0.3s ease;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: ${SHADOW.medium};
     left: 0;
     top: 0;
 

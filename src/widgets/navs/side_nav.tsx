@@ -6,12 +6,10 @@ import ClassName from "classnames";
 
 const Wrapper = styled.aside`
     min-width: 250px;
-    background-color: ${COLORS.card_background};
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
+    background-color: ${COLORS.base};
     box-shadow: ${SHADOW.medium};
     padding: 20px 0;
-    border-right: 1px solid ${COLORS.light_gray};
+    border-right: none;
     display: flex;
     flex-direction: column;
     transition: width 0.3s ease;
@@ -42,16 +40,19 @@ const Body = styled.div`
             display: flex;
             align-items: center;
             padding: 10px 20px;
-            transition: background-color 0.3s ease;
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            margin: 0 10px;
 
             &:hover {
-                background-color: ${COLORS.light_gray};
+                background-color: ${COLORS.baseLight};
+                box-shadow: ${SHADOW.light};
             }
 
             &.active {
                 background-color: ${COLORS.blue};
                 color: white;
-                box-shadow: ${SHADOW.light};
+                box-shadow: ${SHADOW.medium};
             }
         }
     }

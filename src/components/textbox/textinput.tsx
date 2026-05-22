@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import React from 'react';
-import {COLORS, RADIUS} from "../../theme.constants";
+import {COLORS, RADIUS, SHADOW} from "../../theme.constants";
 
 const InputGroup = styled.div`
     margin-bottom: 20px;
@@ -15,12 +15,26 @@ const InputGroup = styled.div`
     input {
         width: calc(100% - 24px);
         padding: 12px;
-        border: 1px solid ${COLORS.medium_gray};
-        border-radius: ${RADIUS.small};
+        border: none;
+        border-radius: ${RADIUS.medium};
         font-size: 1em;
         color: ${COLORS.text_dark};
-        background-color: rgba(255, 255, 255, 0.7);
-        transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        background-color: ${COLORS.base};
+        box-shadow: ${SHADOW.insetLight};
+        transition: all 0.3s ease;
+
+        &:focus {
+            outline: none;
+            box-shadow: ${SHADOW.insetMedium};
+        }
+
+        &:hover:not(:focus) {
+            box-shadow: ${SHADOW.insetMedium};
+        }
+
+        &::placeholder {
+            color: ${COLORS.medium_gray};
+        }
     }
 `
 

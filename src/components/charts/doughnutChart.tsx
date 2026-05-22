@@ -1,7 +1,9 @@
 import React from "react";
 import {PieChart, Pie, Cell, Tooltip, ResponsiveContainer} from "recharts";
+import { COLORS } from "../../theme.constants";
 
-const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"];
+// Neumorphic color palette for charts
+const NEOMORPHIC_COLORS = [COLORS.blue, COLORS.green, COLORS.orange, COLORS.red];
 
 interface ChartDataItem {
     name: string;
@@ -16,7 +18,6 @@ export interface DoughnutChartProps {
 }
 
 export const DoughnutChart: React.FC<DoughnutChartProps> = ({chartName = '', data}) => {
-    const totalValue = data.reduce((acc, item) => acc + item.value, 0); // Calculate total
 
     return ( <ResponsiveContainer width={'100%'} height={'100%'} >
             <PieChart>
@@ -32,7 +33,7 @@ export const DoughnutChart: React.FC<DoughnutChartProps> = ({chartName = '', dat
                     labelLine={false} // Hide the default label lines
                 >
                     {data.map((entry, index) => (
-                        <Cell key={`cell-${index}`} fill={entry.color ? entry.color : COLORS[index % COLORS.length]}/>
+                        <Cell key={`cell-${index}`} fill={entry.color ? entry.color : NEOMORPHIC_COLORS[index % NEOMORPHIC_COLORS.length]}/>
                     ))}
                 </Pie>
                 <Tooltip/>

@@ -1,51 +1,90 @@
 import React from "react";
 import styled from "styled-components";
-import {COLORS, RADIUS} from "../../theme";
+import {COLORS, RADIUS, SHADOW} from "../../theme";
 import {faPause, faPlay, faStop} from '@fortawesome/free-solid-svg-icons'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 export const Buttons = styled.button`
     width: calc(100% - 24px);
     padding: 12px;
-    color: white;
+    color: ${COLORS.text_dark};
+    background-color: ${COLORS.base};
     border: none;
-    border-radius: ${RADIUS.small};
+    border-radius: ${RADIUS.medium};
     font-size: 1rem;
-    font-weight: 200;
+    font-weight: 500;
     cursor: pointer;
-    transition: background-color 0.2s ease, transform 0.1s ease;
+    transition: all 0.3s ease;
     margin-top: 10px;
+    box-shadow: ${SHADOW.medium};
+    
+    &:hover {
+        box-shadow: ${SHADOW.large};
+        transform: translateY(-2px);
+    }
+
+    &:active {
+        box-shadow: ${SHADOW.insetMedium};
+        transform: translateY(0);
+    }
 `;
 
 export const RedOutlineButton = styled(Buttons)`
-    border: 1px solid red;
-    background: white;
-    color:red;
+    background-color: ${COLORS.baseLight};
+    color: ${COLORS.red};
+    box-shadow: ${SHADOW.light};
+    
+    &:hover {
+        box-shadow: ${SHADOW.medium};
+        color: ${COLORS.dark_red};
+    }
+
+    &:active {
+        box-shadow: ${SHADOW.insetLight};
+    }
 `;
 
 
 export const BlueOutlineButton = styled(Buttons)`
-    border: 1px solid blue;
-    background: white;
-    color:blue;
+    background-color: ${COLORS.baseLight};
+    color: ${COLORS.blue};
+    box-shadow: ${SHADOW.light};
+    
+    &:hover {
+        box-shadow: ${SHADOW.medium};
+        color: #4A5FB0;
+    }
+
+    &:active {
+        box-shadow: ${SHADOW.insetLight};
+    }
 `;
 
 export const PrimaryButton = styled(Buttons)`
     background-color: ${COLORS.blue};
+    color: white;
+    
     &:hover {
-        background-color: #0056b3;
-        transform: translateY(-1px);
-        box-shadow: 0 2px 5px rgba(0, 122, 255, 0.3);
+        background-color: #4A5FB0;
+        box-shadow: ${SHADOW.large};
+    }
+
+    &:active {
+        box-shadow: ${SHADOW.insetMedium};
     }
 `
 export const SecondaryButton = styled(Buttons)`
     background-color: ${COLORS.light_gray};
     color: ${COLORS.text_dark};
-    border: 1px solid ${COLORS.medium_gray};
+    box-shadow: ${SHADOW.light};
+    
     &:hover {
-        background-color: ${COLORS.medium_gray};
-        transform: translateY(-1px);
-        box-shadow: 0 2px 5px rgba(0, 122, 255, 0.3);
+        background-color: ${COLORS.baseLight};
+        box-shadow: ${SHADOW.medium};
+    }
+
+    &:active {
+        box-shadow: ${SHADOW.insetLight};
     }
 `
 
@@ -61,33 +100,54 @@ const RoundButton = styled(Buttons)`
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.2s ease, transform 0.1s ease;
+    transition: all 0.3s ease;
+    padding: 0;
 
     &:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 2px 5px rgba(0, 122, 255, 0.3);
+        transform: translateY(-3px);
+    }
+
+    &:active {
+        transform: translateY(-1px);
     }
 `;
 
 
 const PlayButton = styled(RoundButton)`
      background: ${COLORS.green};
+     
      &:hover {
-            background: ${COLORS.dark_green};
+            background: #5FA35F;
+            box-shadow: ${SHADOW.large};
+     }
+
+     &:active {
+            box-shadow: ${SHADOW.insetDark};
      }
  `
 
 const PauseButton =  styled(RoundButton)`
     background: ${COLORS.orange};
+    
     &:hover {
-        background: ${COLORS.dark_orange};
+        background: #C98A4F;
+        box-shadow: ${SHADOW.large};
+    }
+
+    &:active {
+        box-shadow: ${SHADOW.insetDark};
     }
 `
 const DoneButton =  styled(RoundButton)`
     background: ${COLORS.red};
+    
     &:hover {
-        background: ${COLORS.dark_red};
+        background: #C84D5C;
+        box-shadow: ${SHADOW.large};
+    }
+
+    &:active {
+        box-shadow: ${SHADOW.insetDark};
     }
 `
 

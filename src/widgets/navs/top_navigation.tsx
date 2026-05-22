@@ -6,6 +6,7 @@ import { NavbarBrand } from './navbar_brand';
 import LogoImg from './logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { COLORS, SHADOW } from '../../theme';
 
 const Navbar = styled(Card)`
     width: calc(100% - 24px);
@@ -16,14 +17,22 @@ const Navbar = styled(Card)`
     display: flex;
     gap: 10px;
     font-size: 1.25vw;
+    background-color: ${COLORS.base};
 `;
 
 const ItemViewContainer = styled.div`
     padding: 5px 10px;
     min-width: 50px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
     &:hover {
         cursor: pointer;
-        text-decoration: underline;
+        background-color: ${COLORS.baseLight};
+        box-shadow: ${SHADOW.light};
+    }
+
+    &:active {
+        box-shadow: ${SHADOW.insetLight};
     }
 `;
 
