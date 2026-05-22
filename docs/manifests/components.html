@@ -582,7 +582,7 @@
 <main>
   <div class="wrap">
     <div class="note info" style="margin-bottom: 16px;">
-            <strong>Tip:</strong> You are using <code>react-docgen</code> (the default). Generation took <strong>0.6s</strong>. For higher quality prop types, consider switching to <code>react-docgen-typescript</code> in your <code>main.ts</code>:
+            <strong>Tip:</strong> You are using <code>react-docgen</code> (the default). Generation took <strong>0.3s</strong>. For higher quality prop types, consider switching to <code>react-docgen-typescript</code> in your <code>main.ts</code>:
             <pre><code>typescript: {
   reactDocgen: 'react-docgen-typescript',
 }</code></pre>
@@ -721,7 +721,7 @@ src?: string</code></pre>
           
     <div class="note err">
       <div class="note-title">Prop type error</div>
-      <div class="note-body"><pre><code>File: /tmp/ceb81570-8ff5-45f0-9dd4-068bc734512f/src/layouts/background.tsx
+      <div class="note-body"><pre><code>File: /tmp/e442eed5-3039-4a93-b399-b0843121b7e0/src/layouts/background.tsx
 Error:
 No suitable component definition found.
 You can debug your component file in this playground: https://react-docgen.dev/playground
@@ -1007,7 +1007,7 @@ export const Background = styled.div&lt;BackgroundProps&gt;`
           
     <div class="note err">
       <div class="note-title">Prop type error</div>
-      <div class="note-body"><pre><code>File: /tmp/ceb81570-8ff5-45f0-9dd4-068bc734512f/src/components/cards/card.tsx
+      <div class="note-body"><pre><code>File: /tmp/e442eed5-3039-4a93-b399-b0843121b7e0/src/components/cards/card.tsx
 Error:
 No suitable component definition found.
 You can debug your component file in this playground: https://react-docgen.dev/playground
@@ -1016,16 +1016,20 @@ import styled from &quot;styled-components&quot;;
 import {COLORS, RADIUS, SHADOW} from &quot;../../theme.constants&quot;;
 
 export const Card = styled.div`
-    background-color: ${COLORS.card_background};
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    padding: 10px;
+    background-color: ${COLORS.base};
+    padding: 20px;
     border-radius: ${RADIUS.medium};
     box-shadow: ${SHADOW.medium};
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    border: none;
     width: 100%;
     text-align: center;
     box-sizing: border-box;
+    transition: all 0.3s ease;
+
+    &amp;:hover {
+        box-shadow: ${SHADOW.large};
+        transform: translateY(-2px);
+    }
 `;
 </code></pre></div>
     </div>
@@ -1127,7 +1131,7 @@ export const Card = styled.div`
           
     <div class="note err">
       <div class="note-title">Prop type error</div>
-      <div class="note-body"><pre><code>File: /tmp/ceb81570-8ff5-45f0-9dd4-068bc734512f/src/layouts/centered.tsx
+      <div class="note-body"><pre><code>File: /tmp/e442eed5-3039-4a93-b399-b0843121b7e0/src/layouts/centered.tsx
 Error:
 No suitable component definition found.
 You can debug your component file in this playground: https://react-docgen.dev/playground
@@ -1258,11 +1262,15 @@ export const Centered =  styled.div&lt;CenteredProps&gt;`
             <pre><code>ButtonComponent?: React.ComponentType&lt;any&gt; = styled(Buttons)`
     background-color: ${COLORS.light_gray};
     color: ${COLORS.text_dark};
-    border: 1px solid ${COLORS.medium_gray};
+    box-shadow: ${SHADOW.light};
+    
     &amp;:hover {
-        background-color: ${COLORS.medium_gray};
-        transform: translateY(-1px);
-        box-shadow: 0 2px 5px rgba(0, 122, 255, 0.3);
+        background-color: ${COLORS.baseLight};
+        box-shadow: ${SHADOW.medium};
+    }
+
+    &amp;:active {
+        box-shadow: ${SHADOW.insetLight};
     }
 `
 
@@ -3495,7 +3503,7 @@ export const WithOnChange = {
           
     <div class="note err">
       <div class="note-title">Prop type error</div>
-      <div class="note-body"><pre><code>File: /tmp/ceb81570-8ff5-45f0-9dd4-068bc734512f/src/layouts/background.tsx
+      <div class="note-body"><pre><code>File: /tmp/e442eed5-3039-4a93-b399-b0843121b7e0/src/layouts/background.tsx
 Error:
 No suitable component definition found.
 You can debug your component file in this playground: https://react-docgen.dev/playground
@@ -3601,7 +3609,7 @@ export const Background = styled.div&lt;BackgroundProps&gt;`
           
     <div class="note err">
       <div class="note-title">Prop type error</div>
-      <div class="note-body"><pre><code>File: /tmp/ceb81570-8ff5-45f0-9dd4-068bc734512f/src/components/cards/card.tsx
+      <div class="note-body"><pre><code>File: /tmp/e442eed5-3039-4a93-b399-b0843121b7e0/src/components/cards/card.tsx
 Error:
 No suitable component definition found.
 You can debug your component file in this playground: https://react-docgen.dev/playground
@@ -3610,16 +3618,20 @@ import styled from &quot;styled-components&quot;;
 import {COLORS, RADIUS, SHADOW} from &quot;../../theme.constants&quot;;
 
 export const Card = styled.div`
-    background-color: ${COLORS.card_background};
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    padding: 10px;
+    background-color: ${COLORS.base};
+    padding: 20px;
     border-radius: ${RADIUS.medium};
     box-shadow: ${SHADOW.medium};
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    border: none;
     width: 100%;
     text-align: center;
     box-sizing: border-box;
+    transition: all 0.3s ease;
+
+    &amp;:hover {
+        box-shadow: ${SHADOW.large};
+        transform: translateY(-2px);
+    }
 `;
 </code></pre></div>
     </div>
@@ -3721,7 +3733,7 @@ export const Card = styled.div`
           
     <div class="note err">
       <div class="note-title">Prop type error</div>
-      <div class="note-body"><pre><code>File: /tmp/ceb81570-8ff5-45f0-9dd4-068bc734512f/src/layouts/centered.tsx
+      <div class="note-body"><pre><code>File: /tmp/e442eed5-3039-4a93-b399-b0843121b7e0/src/layouts/centered.tsx
 Error:
 No suitable component definition found.
 You can debug your component file in this playground: https://react-docgen.dev/playground
