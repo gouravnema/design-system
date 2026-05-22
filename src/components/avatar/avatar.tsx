@@ -14,6 +14,12 @@ const AvatarImage = styled.img<{ size: number }>`
   height: ${(props) => props.size}px;
   border-radius: 50%;
   object-fit: cover;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.12), -4px -4px 8px rgba(255, 255, 255, 0.7);
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.15), -6px -6px 12px rgba(255, 255, 255, 0.8);
+  }
 `;
 export const Avatar: React.FC<AvatarProps> = ({ size = 50, src, alt = 'User Avatar', ...rest }) => {
   return <AvatarImage size={size} src={src || defaultAvatar} alt={alt} {...rest} />;

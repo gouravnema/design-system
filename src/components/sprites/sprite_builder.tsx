@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import React from 'react';
 import ClassName from 'classnames';
+import { SHADOW } from '../../theme.constants';
 
 export interface SpriteProps extends React.HTMLAttributes<HTMLDivElement> {
   width: number; // width of the sprite
@@ -21,6 +22,13 @@ const SpriteContainer = styled.div<SpriteProps>`
     background-position: ${(props) => `-${props.positionX}vw -${props.positionY}vw`};
     background-size: ${(props) => props.size + 'vw' || 'auto'};
     background-repeat: no-repeat;
+    box-shadow: ${SHADOW.light};
+    transition: all 0.3s ease;
+    
+    &:hover {
+        box-shadow: ${SHADOW.medium};
+    }
+
     &.rounded {
         border-radius: 50%;
     }

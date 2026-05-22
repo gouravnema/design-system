@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { COLORS, SHADOW } from '../../theme.constants';
 import React from "react";
 
 interface ProgressBarProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -14,11 +14,11 @@ interface ProgressBarProps extends React.HTMLAttributes<HTMLDivElement> {
 export const ProgressBar = styled.div<ProgressBarProps>`
     width: 100%;
     height: 10px;
-    background-color: ${props => props.backgroundColor || '#e0e0e0'};
+    background-color: ${props => props.backgroundColor || COLORS.base};
     border-radius: 10px;
     overflow: hidden;
     position: relative;
-    box-shadow: ${props => props.shadow || '0 2px 4px rgba(0, 0, 0, 0.1)'};
+    box-shadow: ${props => props.shadow || SHADOW.insetLight};
     margin: 10px 0;
     transition: width 0.3s ease-in-out;
 
@@ -27,7 +27,7 @@ export const ProgressBar = styled.div<ProgressBarProps>`
         display: block;
         width: ${props => props.progress || '0%'};
         height: 100%;
-        background-color: ${props => props.color || '#34C759'};
+        background-color: ${props => props.color || COLORS.green};
         transition: width 0.3s ease-in-out;
         z-index: 1; /* Ensure this is on top */
         position: absolute;
@@ -40,7 +40,7 @@ export const ProgressBar = styled.div<ProgressBarProps>`
         display: block;
         width: ${props => props.progress2 || '0%'};
         height: 100%;
-        background-color: ${props => props.color2 || '#FFCC00'};
+        background-color: ${props => props.color2 || COLORS.orange};
         transition: width 0.3s ease-in-out;
         z-index: 2; /* Ensure this is on top of the first bar */
         position: absolute;

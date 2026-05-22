@@ -1,10 +1,14 @@
 import React from 'react';
 import styled from "styled-components";
-import {COLORS, RADIUS} from "../../theme.constants";
+import {COLORS, RADIUS, SHADOW} from "../../theme.constants";
 
 const Base = styled.span`
-    padding: 5px;
-    border-radius: ${RADIUS.small};
+    padding: 8px 12px;
+    border-radius: ${RADIUS.medium};
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    transition: all 0.3s ease;
 `;
 interface PillsProps extends React.HTMLAttributes<HTMLSpanElement> {
     label: string;
@@ -18,13 +22,28 @@ const Pills: React.FC<PillsProps> = ({label, children, ...rest}) => {
 export const PrimaryPill = styled(Pills)`
     background: ${COLORS.blue};
     color: white;
+    box-shadow: ${SHADOW.light};
+
+    &:hover {
+        box-shadow: ${SHADOW.medium};
+    }
 `
 
 export const SecondaryPill = styled(Pills)`
-    background: ${COLORS.medium_gray};
+    background: ${COLORS.base};
     color: ${COLORS.text_dark};
+    box-shadow: ${SHADOW.light};
+
+    &:hover {
+        box-shadow: ${SHADOW.medium};
+    }
 `
 export const TransparentPill = styled(Pills)`
     color: ${COLORS.text_light};
-    border: 1px solid ${COLORS.light_gray};
+    background: ${COLORS.baseLight};
+    box-shadow: ${SHADOW.light};
+
+    &:hover {
+        box-shadow: ${SHADOW.medium};
+    }
 `

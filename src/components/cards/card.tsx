@@ -2,14 +2,18 @@ import styled from "styled-components";
 import {COLORS, RADIUS, SHADOW} from "../../theme.constants";
 
 export const Card = styled.div`
-    background-color: ${COLORS.card_background};
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    padding: 10px;
+    background-color: ${COLORS.base};
+    padding: 20px;
     border-radius: ${RADIUS.medium};
     box-shadow: ${SHADOW.medium};
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    border: none;
     width: 100%;
     text-align: center;
     box-sizing: border-box;
+    transition: all 0.3s ease;
+
+    &:hover {
+        box-shadow: ${SHADOW.large};
+        transform: translateY(-2px);
+    }
 `;
