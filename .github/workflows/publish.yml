@@ -3,7 +3,8 @@ name: Publish to GitHub Packages
 on:
   push:
     branches:
-      - main # Run when changes are pushed to the main branch
+      - original # Run when changes are pushed to the original branch
+      - neomorphic # Run when changes are pushed to the original branch
 
 jobs:
   publish:
