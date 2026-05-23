@@ -8,7 +8,7 @@ export interface SideNavLink {
     label: string;
 }
 interface SideNavProps {
-    logo: React.ReactNode;
+    logo?: React.ReactNode;
     links: {
         [key: string]: SideNavLink;
     };
