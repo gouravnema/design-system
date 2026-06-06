@@ -257,7 +257,7 @@ export const TopNavigation: React.FC<TopNavigationProps> = ({ title, profileData
         <NavbarBrand title={title} logo={LogoImg} />
         <LargeScreen>
           <Items items={items} isOpen={isMenuOpen} />
-          <Profile data={profileData} />
+          <Profile data={profileData} isOpen={isMenuOpen} />
         </LargeScreen>
         <HamburgerButton onClick={toggleMenu}>
           <FontAwesomeIcon icon={isMenuOpen ? faTimes : faBars} />

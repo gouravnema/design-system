@@ -4,6 +4,7 @@ export const COLORS = {
   base: '#E0E5EC',           // Main background/surface
   baseLight: '#F5F7FA',      // Lighter surface
   baseDark: '#A3B1C6',       // Darker surface for contrast
+  baseBorder: '#738196',       // Base Border
 
   // Accent colors (muted for neumorphism)
   blue: '#5F7FD4',           // Soft blue
@@ -16,6 +17,7 @@ export const COLORS = {
 
   // Text colors
   text_dark: '#3A3F47',      // Dark text
+  text: '#4A4F57',      // text
   text_light: '#6B7280',     // Light text
 
   // Background colors
