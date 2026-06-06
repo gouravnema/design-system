@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import {PrimaryButton, SecondaryButton} from "../components/buttons/buttons";
+import { SIZES } from '../theme';
 
 interface TabWrapperProps extends React.HTMLAttributes<HTMLDivElement> {}
 
@@ -12,7 +13,7 @@ const TabWrapper = styled.div<TabWrapperProps>`
     margin: 10px;
     width: calc(100% - 20px);
     .tabs {
-        padding: 5px;
+        padding: ${SIZES.xs};
         display: flex;
         flex-wrap: wrap;
         gap:15px;
@@ -21,11 +22,12 @@ const TabWrapper = styled.div<TabWrapperProps>`
         }
     }
     .tab-content{
-        padding: 5px;
+        padding: ${SIZES.xs};
         display: flex;
         flex-direction: column;
         gap:5px;
         overflow-y: scroll;
+        flex-grow: 1;
     }
 `;
 

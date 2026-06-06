@@ -1,22 +1,24 @@
 import React, { useState } from 'react';
 import { Tabs, TabsProps } from './tabs';
 import styled from 'styled-components';
+import { Card } from '../components';
+import { Background } from './background';
 
 interface TemplateArgs extends TabsProps {
   initialActiveTab?: string;
 }
 
-const TabContentWrapper = styled.div`
-  padding: 15px;
-  border: 1px solid #eee;
-  border-top: none;
-  border-radius: 0 0 8px 8px;
-  background-color: #f9f9f9;
-  min-height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #333;
+const TabContentWrapper = styled(Card)`
+    padding: 15px;
+    border: 1px solid #eee;
+    border-top: none;
+    background-color: #f9f9f9;
+    min-height: 100px;
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+    color: #333;
 `;
 
 export default {
@@ -44,12 +46,14 @@ const Template = (args: TemplateArgs) => {
   const currentContent = args.tabs.find((tab: any) => tab.value === activeTab)?.content || 'No content for this tab.';
 
   return (
+    <Background>
       <Tabs
         {...args}
         tabs={args.tabs.map((tab: any) => ({ ...tab, active: tab.value === activeTab }))}
         onTabChange={handleTabChange}
         content={<TabContentWrapper>{currentContent}</TabContentWrapper>}
       />
+    </Background>
   );
 };
 

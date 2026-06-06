@@ -8,7 +8,7 @@ import {
 
 import ClassName from "classnames";
 
-import { COLORS, SHADOW, VIEWPORT } from "../../theme";
+import { COLORS, SHADOW, SIZES, VIEWPORT } from '../../theme';
 
 const DesktopWrapper = styled.aside`
     min-width: 250px;
@@ -40,6 +40,7 @@ const Body = styled.div`
 
         li {
             display: list-item;
+            margin: ${SIZES.xs};
         }
 
         a {
@@ -178,7 +179,6 @@ export const SideNav: React.FC<SideNavProps> = ({
           {/* Desktop Sidebar */}
           <DesktopWrapper className="side-nav">
               <Header>{logo}</Header>
-
               <Body>
                   <ul>
                       {sortedLinks.map(([key, link]) => (
