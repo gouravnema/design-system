@@ -1,23 +1,31 @@
-import React, { SyntheticEvent } from 'react';
+import React, { SyntheticEvent, useState } from 'react';
 import styled from 'styled-components';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import { Card, Silhouette } from '../../components';
 import { NavbarBrand } from './navbar_brand';
 import LogoImg from './logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { faChevronDown, faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { COLORS, SHADOW } from '../../theme';
 
 const Navbar = styled(Card)`
+    
     width: calc(100% - 24px);
     min-height: 40px;
-    max-height: 80px;
     padding: 0;
     margin: 5px;
     display: flex;
-    gap: 10px;
-    font-size: 1.25vw;
+    flex-direction: column;
+    gap: 0;
+    font-size: clamp(12px, 1.25vw, 18px);
     background-color: ${COLORS.base};
+    position: relative;
+
+    @media (max-width: 768px) {
+        width: calc(100% - 16px);
+        margin: 3px;
+        font-size: clamp(10px, 2vw, 14px);
+    }
 `;
 
 const ItemViewContainer = styled.div`
@@ -25,6 +33,10 @@ const ItemViewContainer = styled.div`
     min-width: 50px;
     border-radius: 8px;
     transition: all 0.3s ease;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 5px;
     &:hover {
         cursor: pointer;
         background-color: ${COLORS.baseLight};
@@ -33,6 +45,14 @@ const ItemViewContainer = styled.div`
 
     &:active {
         box-shadow: ${SHADOW.insetLight};
+    }
+
+    @media (max-width: 768px) {
+        padding: 12px 15px;
+        font-size: 14px;
+        width: 100%;
+        white-space: normal;
+        justify-content: center;
     }
 `;
 
@@ -89,19 +109,30 @@ const ItemCollectionView = ({ collection }: { collection: MenuCollection }) => {
   );
 };
 
-const ItemsContainer = styled.div`
+const ItemsContainer = styled.div<{ isOpen: boolean }>`
     display: flex;
     gap: 5px;
     font-weight: 500;
     padding: 5px;
-    flex-grow: 1;
     align-items: center;
     justify-content: flex-end;
+    flex-grow: 1;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+        padding: 0;
+        max-height: ${props => props.isOpen ? '1000px' : '0'};
+        overflow: hidden;
+        transition: max-height 0.4s ease-in-out;
+        border-top: ${props => props.isOpen ? `1px solid ${COLORS.baseBorder}` : 'none'};
+    }
 `;
 
 const ProfileContainer = styled.div`
     display: flex;
-    gap: 5px;
+    gap: 8px;
     align-items: center;
     padding: 5px;
     flex-direction: row;
@@ -112,11 +143,26 @@ const ProfileContainer = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
+        min-width: 40px;
+        min-height: 40px;
+    }
+
+    @media (max-width: 768px) {
+        width: 100%;
+        justify-content: flex-start;
+        padding: 10px 15px;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        gap: 10px;
+
+        >.img-holder {
+            width: 40px;
+            height: 40px;
+        }
     }
 `;
 
-const Items = ({ items }: { items: ItemType }) => {
-  return <ItemsContainer>
+const Items = ({ items, isOpen = false }: { items: ItemType; isOpen?: boolean }) => {
+  return <ItemsContainer isOpen={isOpen} className={'items'}>
     {items.map((item) => {
       if ('items' in item) {
         // It's a MenuCollection
@@ -134,7 +180,11 @@ const Items = ({ items }: { items: ItemType }) => {
 };
 
 
-const Profile = ({ data }: { data?: { name: string; avatarUrl?: string } }) => {
+const Profile = ({ data, isOpen }: { data?: { name: string; avatarUrl?: string }, isOpen:null|boolean }) => {
+
+  if (isOpen === false) {
+    return
+  }
   return (
     <ProfileContainer>
       <div className={'img-holder'}>
@@ -149,12 +199,76 @@ const Profile = ({ data }: { data?: { name: string; avatarUrl?: string } }) => {
   );
 };
 
+const HamburgerButton = styled.button`
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: ${COLORS.text};
+    padding: 5px 10px;
+    @media (max-width: 768px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+`;
+
+
+const NavbarTop = styled.div`
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 5px;
+    @media (max-width: 768px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+`;
+
+const SmallScreen = styled.div`
+    display: none;
+    @media (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+    }
+`
+
+const LargeScreen = styled.div`
+    display: flex;
+    @media (max-width: 768px) {
+        display: none;
+    }
+`
+
 export const TopNavigation: React.FC<TopNavigationProps> = ({ title, profileData, items = [] }) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <Navbar>
-      <NavbarBrand title={title} logo={LogoImg} />
-      <Items items={items} />
-      <Profile data={profileData} />
+      <NavbarTop>
+        <NavbarBrand title={title} logo={LogoImg} />
+        <LargeScreen>
+          <Items items={items} isOpen={isMenuOpen} />
+          <Profile data={profileData} />
+        </LargeScreen>
+        <HamburgerButton onClick={toggleMenu}>
+          <FontAwesomeIcon icon={isMenuOpen ? faTimes : faBars} />
+        </HamburgerButton>
+
+      </NavbarTop>
+      <SmallScreen>
+        <Items items={items} isOpen={isMenuOpen} />
+        <Profile data={profileData}  isOpen={isMenuOpen}/>
+      </SmallScreen>
+
     </Navbar>
   );
 };

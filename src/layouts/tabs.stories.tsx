@@ -44,14 +44,12 @@ const Template = (args: TemplateArgs) => {
   const currentContent = args.tabs.find((tab: any) => tab.value === activeTab)?.content || 'No content for this tab.';
 
   return (
-    <div style={{ width: '500px', height: '300px', border: '1px solid #ccc', borderRadius: '8px', display: 'flex', flexDirection: 'column' }}>
       <Tabs
         {...args}
         tabs={args.tabs.map((tab: any) => ({ ...tab, active: tab.value === activeTab }))}
         onTabChange={handleTabChange}
         content={<TabContentWrapper>{currentContent}</TabContentWrapper>}
       />
-    </div>
   );
 };
 

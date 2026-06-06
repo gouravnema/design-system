@@ -6,6 +6,7 @@ interface TabWrapperProps extends React.HTMLAttributes<HTMLDivElement> {}
 
 const TabWrapper = styled.div<TabWrapperProps>`
     display: flex;
+    flex-grow: 1;
     flex-direction: column;
     gap:15px;
     margin: 10px;
@@ -13,6 +14,7 @@ const TabWrapper = styled.div<TabWrapperProps>`
     .tabs {
         padding: 5px;
         display: flex;
+        flex-wrap: wrap;
         gap:15px;
         button {
             width: 150px;
@@ -39,7 +41,7 @@ export interface TabsProps {
     content: React.ReactNode;
 }
 
-export const Tabs: React.FC<TabsProps> = ({tabs, onTabChange, content}) => {
+export const Tabs: React.FC<TabsProps> = ({tabs, onTabChange, content}, ...rest) => {
     const tabStops = tabs.map(tab => {
         const tabClickHandler = (e: React.MouseEvent<HTMLButtonElement>) => {
             e.preventDefault();
@@ -49,7 +51,7 @@ export const Tabs: React.FC<TabsProps> = ({tabs, onTabChange, content}) => {
         return (tab.active ? <PrimaryButton onClick={tabClickHandler}>{tab.label}</PrimaryButton> :
             <SecondaryButton onClick={tabClickHandler}>{tab.label}</SecondaryButton>);
     });
-    return <TabWrapper>
+    return <TabWrapper {...rest} >
         <div className={'tabs'}>
             {tabStops}
         </div>
