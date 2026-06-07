@@ -4,6 +4,7 @@ import {Card} from "../../components/cards/card";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClose } from '@fortawesome/free-solid-svg-icons';
 import { COLORS, SHADOW } from '../../theme.constants';
+import {VIEWPORT } from '../../theme';
 
 const ModalWrapper = styled.div`
     position: absolute;
@@ -17,13 +18,20 @@ const ModalWrapper = styled.div`
     justify-content: center;
     align-items: center;
     backdrop-filter: blur(2px);
-    .modal-card{
+
+    .modal-card {
         opacity: 1;
         max-width: 50vw;
         height: max-content;
         display: flex;
         flex-direction: column;
-        .close{
+        @media (max-width: ${VIEWPORT.mobile}) {
+            max-width: 100vw;
+            height: 100vh;
+            border-radius: 0;
+        }
+
+        .close {
             cursor: pointer;
             width: 20px;
             display: flex;
@@ -35,14 +43,17 @@ const ModalWrapper = styled.div`
             background: ${COLORS.base};
             color: ${COLORS.text_dark};
             transition: all 0.3s ease;
-            &:hover{
+
+            &:hover {
                 box-shadow: ${SHADOW.medium};
             }
+
             &:active {
                 box-shadow: ${SHADOW.insetLight};
             }
         }
-        .content{
+
+        .content {
             display: flex;
             flex-direction: column;
         }

@@ -3,7 +3,7 @@ import {COLORS, RADIUS, SHADOW} from "../../theme.constants";
 
 export const Card = styled.div`
     background-color: ${COLORS.base};
-    padding: 20px;
+    padding: ${SIZES.lg};
     border-radius: ${RADIUS.medium};
     box-shadow: ${SHADOW.medium};
     border: none;
@@ -14,6 +14,5 @@ export const Card = styled.div`
 
     &:hover {
         box-shadow: ${SHADOW.large};
-        transform: translateY(-2px);
     }
 `;
