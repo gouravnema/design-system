@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
-import {COLORS, RADIUS, SHADOW} from "../../theme.constants";
+import {COLORS, RADIUS, SHADOW} from "../../theme";
 
 const Base = styled.span`
     padding: 8px 12px;

@@ -1,10 +1,9 @@
 import React from 'react';
 import styled from "styled-components";
-import {Card} from "../../components/cards/card";
+import {Card} from '../../components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClose } from '@fortawesome/free-solid-svg-icons';
-import { COLORS, SHADOW } from '../../theme.constants';
-import {VIEWPORT } from '../../theme';
+import { COLORS, SHADOW, VIEWPORT } from '../../theme';
 
 const ModalWrapper = styled.div`
     position: absolute;

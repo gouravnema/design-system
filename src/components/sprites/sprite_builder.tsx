@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import React from 'react';
 import ClassName from 'classnames';
-import { SHADOW } from '../../theme.constants';
+import { SHADOW } from '../../theme';
 
 export interface SpriteProps extends React.HTMLAttributes<HTMLDivElement> {
   width: number; // width of the sprite

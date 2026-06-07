@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {COLORS, TYPOGRAPHGY} from "../theme.constants";
+import {COLORS, TYPOGRAPHGY} from "../theme";
 
 export interface BackgroundProps extends React.HTMLAttributes<HTMLDivElement> {}
 

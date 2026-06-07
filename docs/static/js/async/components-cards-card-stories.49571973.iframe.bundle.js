@@ -1,0 +1,16 @@
+"use strict";(self.webpackChunk_gouravnema_design_system=self.webpackChunk_gouravnema_design_system||[]).push([["177"],{"./src/components/cards/card.stories.tsx"(e,t,r){r.r(t),r.d(t,{Default:()=>d,LargeCard:()=>l,WithCustomContent:()=>n,__namedExportsOrder:()=>p,default:()=>a});var s=r("./node_modules/react/index.js");let a={title:"Components/Card",component:r("./src/components/cards/card.tsx").Z,parameters:{layout:"centered"},tags:["autodocs"],argTypes:{children:{control:"text"}}},d={args:{children:"This is a default card."}},n={args:{children:s.createElement("div",null,s.createElement("h3",null,"Custom Card Title"),s.createElement("p",null,"This card contains custom HTML content."),s.createElement("button",null,"Click Me"))}},l={args:{children:s.createElement("div",{style:{padding:"20px",fontSize:"1.2em"}},s.createElement("h2",null,"A Larger Card"),s.createElement("p",null,"This card demonstrates more content and a slightly larger size due to internal padding."))}},p=["Default","WithCustomContent","LargeCard"]},"./src/components/cards/card.tsx"(e,t,r){r.d(t,{Z:()=>p});var s=r("./node_modules/styled-components/dist/styled-components.browser.esm.js"),a=r("./src/theme/colors.ts"),d=r("./src/theme/sizes.ts"),n=r("./src/theme/radius.ts"),l=r("./src/theme/shadows.ts");let p=s.Ay.div`
+    background-color: ${a.l.base};
+    padding: ${d.F.lg};
+    border-radius: ${n.Z.medium};
+    box-shadow: ${l.x.medium};
+    border: none;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+
+    &:hover {
+        box-shadow: ${l.x.large};
+    }
+`},"./src/theme/colors.ts"(e,t,r){r.d(t,{l:()=>s});let s={base:"#E0E5EC",baseLight:"#F5F7FA",baseDark:"#A3B1C6",baseBorder:"#738196",blue:"#5F7FD4",green:"#5FB36D",dark_green:"#4A8A54",red:"#D85F6F",dark_red:"#B84C5A",orange:"#D99B5F",dark_orange:"#B87A47",text_dark:"#3A3F47",text:"#4A4F57",text_light:"#6B7280",background:"#E0E5EC",card_background:"#E0E5EC",light_gray:"#F5F7FA",medium_gray:"#C9D1DC",dark_gray:"#8FA3BD"}},"./src/theme/radius.ts"(e,t,r){r.d(t,{Z:()=>s});let s={small:"12px",medium:"20px",large:"30px",full:"50%"}},"./src/theme/shadows.ts"(e,t,r){r.d(t,{x:()=>s});let s={insetLight:"inset 2px 2px 5px rgba(255, 255, 255, 0.7), inset -2px -2px 5px rgba(0, 0, 0, 0.1)",insetMedium:"inset 3px 3px 7px rgba(255, 255, 255, 0.8), inset -3px -3px 7px rgba(0, 0, 0, 0.15)",insetDark:"inset 5px 5px 10px rgba(255, 255, 255, 0.9), inset -5px -5px 10px rgba(0, 0, 0, 0.2)",light:"3px 3px 6px rgba(0, 0, 0, 0.1), -3px -3px 6px rgba(255, 255, 255, 0.7)",medium:"5px 5px 10px rgba(0, 0, 0, 0.15), -5px -5px 10px rgba(255, 255, 255, 0.8)",medium2:"5px 5px 12px rgba(0, 0, 0, 0.12), -5px -5px 12px rgba(255, 255, 255, 0.75)",large:"8px 8px 16px rgba(0, 0, 0, 0.2), -8px -8px 16px rgba(255, 255, 255, 0.9)"}},"./src/theme/sizes.ts"(e,t,r){r.d(t,{F:()=>s,n:()=>a});let s={xs:"8px",sm:"12px",md:"16px",lg:"20px",xl:"24px"},a={small_mobile:"480px",mobile:"768px",tablet:"1024px",desktop:"1440px",fullHd:"1920px",desktop4K:"3840px"}}}]);
+//# sourceMappingURL=components-cards-card-stories.49571973.iframe.bundle.js.map

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { COLORS, SHADOW } from '../../theme.constants';
+import { COLORS, SHADOW } from '../../theme';
 import React from "react";
 
 interface ProgressBarProps extends React.HTMLAttributes<HTMLDivElement> {

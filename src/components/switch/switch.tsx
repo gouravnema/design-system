@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { COLORS, SHADOW } from '../../theme.constants';
+import { COLORS, SHADOW } from '../../theme';
 
 export type SwitchProps = {
   defaultState?: boolean;

@@ -1,6 +1,6 @@
 import React from "react";
 import {PieChart, Pie, Cell, Tooltip, ResponsiveContainer} from "recharts";
-import { COLORS } from "../../theme.constants";
+import { COLORS } from "../../theme";
 
 // Neumorphic color palette for charts
 const NEOMORPHIC_COLORS = [COLORS.blue, COLORS.green, COLORS.orange, COLORS.red];

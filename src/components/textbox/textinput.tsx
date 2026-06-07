@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import React from 'react';
-import {COLORS, RADIUS, SHADOW} from "../../theme.constants";
+import {COLORS, RADIUS, SHADOW} from "../../theme";
 
 const InputGroup = styled.div`
     margin-bottom: 20px;

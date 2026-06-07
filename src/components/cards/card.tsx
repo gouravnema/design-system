@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {COLORS, RADIUS, SHADOW} from "../../theme.constants";
+import {COLORS, RADIUS, SHADOW, SIZES} from "../../theme";
 
 export const Card = styled.div`
     background-color: ${COLORS.base};

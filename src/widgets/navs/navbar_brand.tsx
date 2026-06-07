@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { COLORS } from '../../theme.constants';
+import { COLORS } from '../../theme';
 
 type NavbarBrandProps = {
     logo: string;
